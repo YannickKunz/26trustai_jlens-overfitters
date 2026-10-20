@@ -1,0 +1,23 @@
+# upstream J++ repo: clone it next to scripts/, don't commit it
+jlens_jpp_reproduction/jpp_lens/
+
+# python / env
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# big files: model / lens weights and caches
+*.pt
+*.safetensors
+*.bin
+*.gguf
+.cache/
+huggingface/
+
+# scratch outputs from re-runs (the committed results JSON is already tracked)
+jlens_jpp_reproduction/results/*.tmp
+jlens_jpp_reproduction/results/smoke*.json
+*.log
+.DS_Store

@@ -10,9 +10,8 @@ on 5 readout tasks, metric recall@10. Not a certified held-out replication of th
 | `scripts/reproduce_3070ti.py` | The evaluator. Downloads the released J, R and J++ lenses, runs Qwen3.5-9B (4-bit NF4, 8 GB GPU), ranks the hidden intermediate concept at every layer, writes the JSON. Also runs one exploratory arithmetic 8<->9 swap. The docstring says which code comes from which repo. |
 | `scripts/summarize_reproduction.py` | Turns the JSON into the markdown tables. |
 | `results/corrected_3070ti.json` | Raw output: per-item, per-layer ranks, provenance (24 MB). |
-| `results/CORRECTED_REPRODUCTION.md` | Result tables, denominators, comparison limits, pinned revisions. |
+| `results/summarize_reproduction.md` | Result tables, denominators, comparison limits, pinned revisions. |
 | `results/results_summary.ipynb` | Same numbers as the deck, with charts, gains, and the comparison to the J++ paper (Qwen3.5-9B macro, Qwen3.6-27B per task). Needs only pandas + matplotlib. |
-| `presentation/final/` | 20 Oct 2026 meeting deck (v2: pptx, pdf, md). `presentation/build_corrected_deck.mjs` rebuilds it from the JSON. |
 
 ## Setup (not included)
 `scripts/` imports the upstream J++ repo from `jpp_lens/` next to it:
@@ -20,8 +19,12 @@ on 5 readout tasks, metric recall@10. Not a certified held-out replication of th
 git clone https://github.com/safety-research/jpp_lens.git jpp_lens
 git -C jpp_lens checkout d7efc0de372e20589e899188c0cfe8434acc63ec   # commit used for the results
 ```
-Python >= 3.12, CUDA PyTorch, transformers, bitsandbytes, accelerate, huggingface_hub, pandas
-.
+Python >= 3.12 and a CUDA GPU. Install the upstream pinned deps, then the two extras the script needs:
+```bash
+cd jpp_lens && uv sync --extra cu128 && cd ..      # torch (CUDA 12.8), transformers, pandas, ...
+uv pip install bitsandbytes accelerate               # 4-bit loading
+```
+Needs roughly 7.2 GiB of free VRAM (peak 7.19 GiB on our run), the ~18 GB Qwen3.5-9B download, and the three lens files from Hugging Face.
 
 ## Run
 ```bash
