@@ -1,6 +1,6 @@
 # Background knowledge
 
-## Transformers LLMs
+## Transformers and LLMs
 
 - What is a residual stream?
 
