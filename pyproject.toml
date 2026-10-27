@@ -1,0 +1,12 @@
+[project]
+name = "jlens_reproduction_extension"
+version = "0.1.0"
+description = "Reproduction and extension of paper 'Verbalizable Representations Form a Global Workspace in Language Models'"
+readme = "README.md"
+requires-python = ">=3.10,<3.15"
+dependencies = [
+    "jlens",
+]
+
+[tool.uv.sources]
+jlens = { git = "https://github.com/anthropics/jacobian-lens" }

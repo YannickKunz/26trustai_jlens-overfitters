@@ -1,5 +1,11 @@
 # 26trustai_jlens-overfitters
 
+## Getting started
+
+```
+uv sync
+```
+
 ## Resources
 
 - [Seminar GitHub Website](https://github.com/lydiaYchen/26TrustAI)
