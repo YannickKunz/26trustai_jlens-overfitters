@@ -16,7 +16,7 @@ Then, on a submit node run:
 apptainer build jlens.sif Apptainer.def
 ```
 
-Request a GPU node: (not enough memory for "Qwen/Qwen3.5-4B", encounters OOM during training. we'll need to try another GPU or reduce the context length of the model)
+Request a GPU node: (Using "Qwen/Qwen3.5-4B", can fit a J-Lens using `dim_batch=8`, otherwise encountering OOM error. Would be ideal to try running on a more powerful GPU. With this setup, training takes ~50s per prompt.)
 
 ```
 srun --partition=gpu --gres=gpu:rtx4090:1 --cpus-per-task=4 --nodes=1 --mem=16G --time=02:00:00 --pty bash
