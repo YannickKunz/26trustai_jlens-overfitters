@@ -18,7 +18,7 @@ def main():
     tokenizer = transformers.AutoTokenizer.from_pretrained(MODEL_NAME)
     model = jlens.from_hf(hf_model, tokenizer)
 
-    prompts = load_wikitext_prompts(n_prompts=100)
+    prompts = load_wikitext_prompts(n_prompts=11)
     lens = jlens.fit(
         model, prompts, dim_batch=8, max_seq_len=128, checkpoint_path="ckpt.pt"
     )
