@@ -1,0 +1,36 @@
+Bootstrap: docker
+From: nvidia/cuda:12.1.1-runtime-ubuntu22.04
+
+%files
+    ./pyproject.toml /jlens_workspace/pyproject.toml
+    ./uv.lock /jlens_workspace/uv.lock
+
+%post
+    export DEBIAN_FRONTEND=noninteractive
+
+    # 1. Install system basics
+    apt-get update && apt-get install -y --no-install-recommends \
+        curl ca-certificates python3 python3-pip git
+
+    # 2. Install uv (standalone binary)
+    curl -LsSf https://astral.sh/uv/install.sh | UV_INSTALL_DIR=/usr/local/bin sh
+
+    # 3. Create python .venv with required packages from uv.lock
+    cd /jlens_workspace
+    uv sync --frozen
+
+    # 4. Cleanup to reduce image size
+    apt-get clean
+    rm -rf /var/lib/apt/lists/*
+    # Optional: remove uv cache to save space (can be 1GB+)
+    rm -rf /root/.cache/uv
+
+%environment
+    export LC_ALL=C
+    export PATH=/usr/local/cuda/bin:$PATH
+    export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH
+    export PATH="/jlens_workspace/.venv/bin:$PATH"
+    export PROJECT_ROOT=/jlens_workspace
+
+%runscript
+    python src/main.py

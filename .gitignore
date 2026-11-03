@@ -1,3 +1,6 @@
+# J-Lens apptainer image
+jlens.sif
+
 # upstream J++ repo: clone it next to scripts/, don't commit it
 jlens_jpp_reproduction/jpp_lens/
 
