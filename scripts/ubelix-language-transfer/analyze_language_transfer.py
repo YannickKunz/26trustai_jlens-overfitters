@@ -11,6 +11,12 @@ differences between cells are paired.
 Only held-out items the model answers correctly are used, and only intermediates that are
 single-token and different words in the two languages, so the four conditions of an item
 score the same concepts. Writes cells.csv, contrasts.csv, gaps.csv and summary.md to --out.
+
+Recall@k saturates when a lens never ranks a target in the top k (English-fitted lenses on French
+targets score 0, so G = 1 for every lens). The log-rank gap does not saturate: for a domain d (prompts
+and targets in language d), it is the mean log2 best rank of the targets under the other-language
+lens minus that under the d-language lens, in bits (+1: the targets are ranked twice as low).
+It is written to logrank.csv and to the end of summary.md, with the H1 contrast against J.
 Needs pandas and numpy only.
 """
 import argparse
@@ -29,7 +35,7 @@ POSITIONS = ["language name", "category", "operand", "answer"]
 OTHER = {"en": "fr", "fr": "en"}
 
 
-def load_units(ranks_path, lang, k):
+def load_units(ranks_path, lang, k, value="hit"):
     """{unit: frame [task, item] x [lens, fit, pool, prompt_lang, target_lang]} of item scores,
     and the lines describing what each filter removed."""
     ranks = pd.read_csv(ranks_path)
@@ -37,7 +43,8 @@ def load_units(ranks_path, lang, k):
     notes = []
     keys = ["lens", "fit", "pool", "group", "split", "eval", "item", "prompt_lang", "target_lang", "position"]
     best = ranks.groupby(keys)["rank"].min().reset_index()
-    best["hit"] = (best["rank"] <= k).astype(float)
+    # value: "hit" (recall@k) or "logrank" (log2 of the best rank, lower is better)
+    best["hit"] = (best["rank"] <= k).astype(float) if value == "hit" else np.log2(best["rank"].astype(float))
     notes.append(f"scored items: {best['item'].nunique()}")
 
     best = best[best["split"] == "held-out"]
@@ -82,12 +89,12 @@ def load_units(ranks_path, lang, k):
 class Unit:
     """Point estimates and bootstrap draws of every cell of one unit."""
 
-    def __init__(self, table, n_boot, rng):
+    def __init__(self, table, n_boot, rng, scale=100):
         self.columns = table.columns
         tasks = [part.to_numpy() for _, part in table.groupby(level="eval")]
-        self.point = np.mean([task.mean(axis=0) for task in tasks], axis=0) * 100
+        self.point = np.mean([task.mean(axis=0) for task in tasks], axis=0) * scale
         self.draws = np.mean([task[rng.integers(0, len(task), (n_boot, len(task)))].mean(axis=1)
-                              for task in tasks], axis=0) * 100
+                              for task in tasks], axis=0) * scale
         self.n_items = len(table)
 
     def cell(self, lens, fit, condition, pool=None):
@@ -244,6 +251,47 @@ def main():
                      "Domain = prompts and targets in that language, parallel items. The H1 rows are G(lens) - G(J): "
                      "positive means the lens transfers worse than J.", "",
                      markdown(gaps.set_index(["quantity", "lens"])[["estimate", "share_above_0"]].round(3)), ""]
+    # Log-rank gap: the same items and filters, log2 best rank instead of hit (seeded separately)
+    log_tables, _ = load_units(args.ranks, args.lang, args.k, value="logrank")
+    log_rng = np.random.default_rng(args.seed + 1)
+    log_units = {name: Unit(table, args.n_boot, log_rng, scale=1) for name, table in log_tables.items()}
+    logrank = []
+    if "parallel" in log_units:
+        unit = log_units["parallel"]
+        mean_gap = {}
+        for lens in LENSES[1:]:
+            per_domain = {}
+            for domain in ("en", "fr"):
+                condition = (domain, domain)
+                per_domain[domain] = combine(lambda own, other: other - own,
+                                             unit.cell(lens, domain, condition), unit.cell(lens, OTHER[domain], condition))
+            mean_gap[lens] = combine(lambda a, b: (a + b) / 2, per_domain["en"], per_domain["fr"])
+            for domain, value in [*per_domain.items(), ("mean", mean_gap[lens])]:
+                if value is not None:
+                    name = f"log-rank gap, {domain.upper()} domain" if domain != "mean" else "log-rank gap, mean"
+                    logrank.append({"lens": lens, "quantity": name, **row(value)})
+        for lens in LENSES[2:]:
+            value = combine(lambda a, b: a - b, mean_gap[lens], mean_gap["j"])
+            if value is not None:
+                logrank.append({"lens": lens, "quantity": "log-rank gap - that of J (H1)", **row(value)})
+        # Mean log2 best rank per cell, for reference
+        for lens in LENSES:
+            for fit in ["none"] if lens == "logit" else FITS:
+                for condition in CONDITIONS:
+                    value = unit.cell(lens, fit, condition)
+                    if value is not None:
+                        logrank.append({"lens": lens, "quantity": f"mean log2 rank, {fit} fit, {label(condition)}", **row(value)})
+    logrank = pd.DataFrame(logrank)
+    logrank.to_csv(out / "logrank.csv", index=False)
+    if len(logrank):
+        main_rows = logrank[~logrank["quantity"].str.startswith("mean log2 rank")]
+        main_rows = main_rows.assign(estimate=[text(r, 2) for r in main_rows.to_dict("records")])
+        sections += ["## Log-rank transfer gap (parallel items, bits)", "",
+                     "Per domain d (prompts and targets in d): mean log2 best rank of the targets under the "
+                     "other-language lens minus under the d-language lens. +1 means the targets are ranked twice as "
+                     "low. Unlike recall@k it does not saturate. The H1 rows are gap(lens) - gap(J): positive means "
+                     "the lens transfers worse than J.", "",
+                     markdown(main_rows.set_index(["quantity", "lens"])[["estimate", "share_above_0"]].round(3)), ""]
     (out / "summary.md").write_text("\n".join(sections))
     print("\n".join(sections))
 

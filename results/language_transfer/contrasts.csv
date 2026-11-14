@@ -1,0 +1,379 @@
+unit,lens,contrast,condition,value,ci_low,ci_high,share_above_0
+parallel,j,language: EN fit - FR fit,"EN prompt, EN targets",14.210526315789473,2.631578947368432,28.15789473684211,0.9964
+parallel,j,corpus: WikiText fit - EN fit,"EN prompt, EN targets",-6.578947368421048,-14.473684210526315,0.0,0.0
+parallel,j,"noise: EN fit, pool A - pool B","EN prompt, EN targets",2.6315789473684177,0.0,7.894736842105267,0.6518
+parallel,j,"noise: FR fit, pool A - pool B","EN prompt, EN targets",0.0,0.0,0.0,0.0
+parallel,j,language: EN fit - FR fit,"EN prompt, FR targets",-25.263157894736842,-42.89473684210526,-10.0,0.0
+parallel,j,corpus: WikiText fit - EN fit,"EN prompt, FR targets",0.0,0.0,0.0,0.0
+parallel,j,"noise: EN fit, pool A - pool B","EN prompt, FR targets",0.0,0.0,0.0,0.0
+parallel,j,"noise: FR fit, pool A - pool B","EN prompt, FR targets",0.0,0.0,0.0,0.0
+parallel,j,language: EN fit - FR fit,"FR prompt, EN targets",11.578947368421055,1.3157894736842124,24.73684210526315,0.9868
+parallel,j,corpus: WikiText fit - EN fit,"FR prompt, EN targets",-3.947368421052637,-10.526315789473685,0.0,0.0
+parallel,j,"noise: EN fit, pool A - pool B","FR prompt, EN targets",2.6315789473684177,0.0,7.894736842105267,0.6416
+parallel,j,"noise: FR fit, pool A - pool B","FR prompt, EN targets",0.0,0.0,0.0,0.0
+parallel,j,language: EN fit - FR fit,"FR prompt, FR targets",-20.0,-35.0,-5.0,0.0
+parallel,j,corpus: WikiText fit - EN fit,"FR prompt, FR targets",0.0,0.0,0.0,0.0
+parallel,j,"noise: EN fit, pool A - pool B","FR prompt, FR targets",0.0,0.0,0.0,0.0
+parallel,j,"noise: FR fit, pool A - pool B","FR prompt, FR targets",0.0,0.0,0.0,0.0
+parallel,j,target-language specificity,EN prompt,39.473684210526315,16.31578947368422,66.32236842105254,1.0
+parallel,j,target-language specificity,FR prompt,31.578947368421055,15.0,48.15789473684211,1.0
+parallel,r,language: EN fit - FR fit,"EN prompt, EN targets",5.000000000000007,-5.263157894736835,15.263157894736842,0.7892
+parallel,r,corpus: WikiText fit - EN fit,"EN prompt, EN targets",5.131578947368418,0.0,12.894736842105267,0.8786
+parallel,r,"noise: EN fit, pool A - pool B","EN prompt, EN targets",-5.000000000000007,-15.0,0.0,0.0
+parallel,r,"noise: FR fit, pool A - pool B","EN prompt, EN targets",-5.0,-15.0,0.0,0.0
+parallel,r,language: EN fit - FR fit,"EN prompt, FR targets",-15.0,-30.0,0.0,0.0
+parallel,r,corpus: WikiText fit - EN fit,"EN prompt, FR targets",0.0,0.0,0.0,0.0
+parallel,r,"noise: EN fit, pool A - pool B","EN prompt, FR targets",0.0,0.0,0.0,0.0
+parallel,r,"noise: FR fit, pool A - pool B","EN prompt, FR targets",0.0,0.0,0.0,0.0
+parallel,r,language: EN fit - FR fit,"FR prompt, EN targets",5.0,0.0,15.0,0.6466
+parallel,r,corpus: WikiText fit - EN fit,"FR prompt, EN targets",2.6315789473684177,0.0,7.894736842105267,0.6538
+parallel,r,"noise: EN fit, pool A - pool B","FR prompt, EN targets",0.0,0.0,0.0,0.0
+parallel,r,"noise: FR fit, pool A - pool B","FR prompt, EN targets",0.0,0.0,0.0,0.0
+parallel,r,language: EN fit - FR fit,"FR prompt, FR targets",-15.0,-30.0,0.0,0.0
+parallel,r,corpus: WikiText fit - EN fit,"FR prompt, FR targets",0.0,0.0,0.0,0.0
+parallel,r,"noise: EN fit, pool A - pool B","FR prompt, FR targets",0.0,0.0,0.0,0.0
+parallel,r,"noise: FR fit, pool A - pool B","FR prompt, FR targets",0.0,0.0,0.0,0.0
+parallel,r,target-language specificity,EN prompt,20.000000000000007,4.868421052631575,35.131578947368425,0.9952
+parallel,r,target-language specificity,FR prompt,20.0,5.0,35.0,0.9944
+parallel,jpp,language: EN fit - FR fit,"EN prompt, EN targets",13.28947368421052,1.7105263157894655,25.0,0.9928
+parallel,jpp,corpus: WikiText fit - EN fit,"EN prompt, EN targets",-9.07894736842104,-20.78947368421052,2.3684210526315614,0.0492
+parallel,jpp,"noise: EN fit, pool A - pool B","EN prompt, EN targets",-7.368421052631575,-22.631578947368425,5.526315789473699,0.1884
+parallel,jpp,"noise: FR fit, pool A - pool B","EN prompt, EN targets",-7.631578947368418,-20.789473684210513,2.89473684210526,0.088
+parallel,jpp,language: EN fit - FR fit,"EN prompt, FR targets",-12.631578947368421,-21.44736842105263,-5.0,0.0
+parallel,jpp,corpus: WikiText fit - EN fit,"EN prompt, FR targets",0.0,0.0,0.0,0.0
+parallel,jpp,"noise: EN fit, pool A - pool B","EN prompt, FR targets",0.0,0.0,0.0,0.0
+parallel,jpp,"noise: FR fit, pool A - pool B","EN prompt, FR targets",20.0,4.473684210526317,37.63157894736842,0.99
+parallel,jpp,language: EN fit - FR fit,"FR prompt, EN targets",18.157894736842103,5.26315789473685,32.36842105263159,0.9984
+parallel,jpp,corpus: WikiText fit - EN fit,"FR prompt, EN targets",-6.447368421052637,-20.526315789473678,6.184210526315788,0.1488
+parallel,jpp,"noise: EN fit, pool A - pool B","FR prompt, EN targets",-2.3684210526315894,-15.526315789473685,10.526315789473678,0.373
+parallel,jpp,"noise: FR fit, pool A - pool B","FR prompt, EN targets",2.3684210526315823,-7.89473684210526,15.0,0.5358
+parallel,jpp,language: EN fit - FR fit,"FR prompt, FR targets",-16.44736842105263,-25.394736842105264,-7.631578947368421,0.0
+parallel,jpp,corpus: WikiText fit - EN fit,"FR prompt, FR targets",0.0,0.0,0.0,0.0
+parallel,jpp,"noise: EN fit, pool A - pool B","FR prompt, FR targets",0.0,0.0,0.0,0.0
+parallel,jpp,"noise: FR fit, pool A - pool B","FR prompt, FR targets",17.105263157894736,-0.5263157894736832,34.73684210526316,0.9656
+parallel,jpp,target-language specificity,EN prompt,25.92105263157894,11.710526315789476,40.0,0.9996
+parallel,jpp,target-language specificity,FR prompt,34.60526315789473,20.39473684210526,49.86842105263159,1.0
+parallel,jpp_wen,language: EN fit - FR fit,"EN prompt, EN targets",26.184210526315795,11.049342105263154,41.71052631578948,1.0
+parallel,jpp_wen,corpus: WikiText fit - EN fit,"EN prompt, EN targets",-15.789473684210535,-27.631578947368418,-3.94736842105263,0.0038
+parallel,jpp_wen,"noise: EN fit, pool A - pool B","EN prompt, EN targets",-5.263157894736835,-13.15789473684211,0.0,0.0
+parallel,jpp_wen,"noise: FR fit, pool A - pool B","EN prompt, EN targets",-5.526315789473678,-18.421052631578945,7.368421052631582,0.1608
+parallel,jpp_wen,language: EN fit - FR fit,"EN prompt, FR targets",-18.815789473684212,-33.81578947368421,-5.0,0.0
+parallel,jpp_wen,corpus: WikiText fit - EN fit,"EN prompt, FR targets",0.0,0.0,0.0,0.0
+parallel,jpp_wen,"noise: EN fit, pool A - pool B","EN prompt, FR targets",0.0,0.0,0.0,0.0
+parallel,jpp_wen,"noise: FR fit, pool A - pool B","EN prompt, FR targets",2.3684210526315788,-7.894736842105263,15.0,0.539
+parallel,jpp_wen,language: EN fit - FR fit,"FR prompt, EN targets",13.421052631578945,1.7105263157894797,25.131578947368425,0.99
+parallel,jpp_wen,corpus: WikiText fit - EN fit,"FR prompt, EN targets",-5.394736842105267,-17.105263157894726,5.0,0.1384
+parallel,jpp_wen,"noise: EN fit, pool A - pool B","FR prompt, EN targets",-4.999999999999993,-15.0,0.0,0.0
+parallel,jpp_wen,"noise: FR fit, pool A - pool B","FR prompt, EN targets",-0.2631578947368425,-10.526315789473692,12.368421052631579,0.3886
+parallel,jpp_wen,language: EN fit - FR fit,"FR prompt, FR targets",-18.815789473684212,-33.81578947368421,-5.0,0.0
+parallel,jpp_wen,corpus: WikiText fit - EN fit,"FR prompt, FR targets",0.0,0.0,0.0,0.0
+parallel,jpp_wen,"noise: EN fit, pool A - pool B","FR prompt, FR targets",0.0,0.0,0.0,0.0
+parallel,jpp_wen,"noise: FR fit, pool A - pool B","FR prompt, FR targets",2.3684210526315788,-7.894736842105263,15.0,0.539
+parallel,jpp_wen,target-language specificity,EN prompt,45.00000000000001,24.73684210526317,64.07894736842107,1.0
+parallel,jpp_wen,target-language specificity,FR prompt,32.23684210526316,12.89473684210526,52.500000000000014,0.9998
+parallel,jpp_wfr,language: EN fit - FR fit,"EN prompt, EN targets",1.05263157894737,-13.026315789473685,16.05263157894737,0.5294
+parallel,jpp_wfr,corpus: WikiText fit - EN fit,"EN prompt, EN targets",-6.05263157894737,-22.368421052631575,9.078947368421048,0.2402
+parallel,jpp_wfr,"noise: EN fit, pool A - pool B","EN prompt, EN targets",12.894736842105274,0.0,28.15789473684211,0.9566
+parallel,jpp_wfr,"noise: FR fit, pool A - pool B","EN prompt, EN targets",0.2631578947368354,-12.368421052631575,10.526315789473685,0.5822
+parallel,jpp_wfr,language: EN fit - FR fit,"EN prompt, FR targets",-20.13157894736842,-35.131578947368425,-6.315789473684211,0.0
+parallel,jpp_wfr,corpus: WikiText fit - EN fit,"EN prompt, FR targets",0.0,0.0,0.0,0.0
+parallel,jpp_wfr,"noise: EN fit, pool A - pool B","EN prompt, FR targets",0.0,0.0,0.0,0.0
+parallel,jpp_wfr,"noise: FR fit, pool A - pool B","EN prompt, FR targets",-10.263157894736842,-23.157894736842106,0.0,0.0
+parallel,jpp_wfr,language: EN fit - FR fit,"FR prompt, EN targets",8.94736842105263,2.5,17.76315789473684,0.9962
+parallel,jpp_wfr,corpus: WikiText fit - EN fit,"FR prompt, EN targets",-2.500000000000007,-10.131578947368421,3.9473684210526336,0.2352
+parallel,jpp_wfr,"noise: EN fit, pool A - pool B","FR prompt, EN targets",10.526315789473685,2.6315789473684177,21.05263157894737,0.9886
+parallel,jpp_wfr,"noise: FR fit, pool A - pool B","FR prompt, EN targets",2.631578947368425,-12.368421052631579,17.631578947368425,0.6122
+parallel,jpp_wfr,language: EN fit - FR fit,"FR prompt, FR targets",-23.81578947368421,-38.94736842105263,-10.0,0.0
+parallel,jpp_wfr,corpus: WikiText fit - EN fit,"FR prompt, FR targets",0.0,0.0,0.0,0.0
+parallel,jpp_wfr,"noise: EN fit, pool A - pool B","FR prompt, FR targets",0.0,0.0,0.0,0.0
+parallel,jpp_wfr,"noise: FR fit, pool A - pool B","FR prompt, FR targets",-7.631578947368418,-20.263157894736842,0.0,0.0
+parallel,jpp_wfr,target-language specificity,EN prompt,21.18421052631579,1.1842105263157858,40.26315789473684,0.9798
+parallel,jpp_wfr,target-language specificity,FR prompt,32.763157894736835,15.0,51.578947368421055,1.0
+parallel,jpp_matched,language: EN fit - FR fit,"EN prompt, EN targets",31.184210526315795,17.105263157894733,46.315789473684205,1.0
+parallel,jpp_matched,corpus: WikiText fit - EN fit,"EN prompt, EN targets",-15.789473684210535,-27.631578947368418,-3.94736842105263,0.0038
+parallel,jpp_matched,"noise: EN fit, pool A - pool B","EN prompt, EN targets",-5.263157894736835,-13.15789473684211,0.0,0.0
+parallel,jpp_matched,"noise: FR fit, pool A - pool B","EN prompt, EN targets",0.2631578947368354,-12.368421052631575,10.526315789473685,0.5822
+parallel,jpp_matched,language: EN fit - FR fit,"EN prompt, FR targets",-20.13157894736842,-35.131578947368425,-6.315789473684211,0.0
+parallel,jpp_matched,corpus: WikiText fit - EN fit,"EN prompt, FR targets",0.0,0.0,0.0,0.0
+parallel,jpp_matched,"noise: EN fit, pool A - pool B","EN prompt, FR targets",0.0,0.0,0.0,0.0
+parallel,jpp_matched,"noise: FR fit, pool A - pool B","EN prompt, FR targets",-10.263157894736842,-23.157894736842106,0.0,0.0
+parallel,jpp_matched,language: EN fit - FR fit,"FR prompt, EN targets",22.236842105263158,10.526315789473685,34.07894736842105,1.0
+parallel,jpp_matched,corpus: WikiText fit - EN fit,"FR prompt, EN targets",-5.394736842105267,-17.105263157894726,5.0,0.1384
+parallel,jpp_matched,"noise: EN fit, pool A - pool B","FR prompt, EN targets",-4.999999999999993,-15.0,0.0,0.0
+parallel,jpp_matched,"noise: FR fit, pool A - pool B","FR prompt, EN targets",2.631578947368425,-12.368421052631579,17.631578947368425,0.6122
+parallel,jpp_matched,language: EN fit - FR fit,"FR prompt, FR targets",-23.81578947368421,-38.94736842105263,-10.0,0.0
+parallel,jpp_matched,corpus: WikiText fit - EN fit,"FR prompt, FR targets",0.0,0.0,0.0,0.0
+parallel,jpp_matched,"noise: EN fit, pool A - pool B","FR prompt, FR targets",0.0,0.0,0.0,0.0
+parallel,jpp_matched,"noise: FR fit, pool A - pool B","FR prompt, FR targets",-7.631578947368418,-20.263157894736842,0.0,0.0
+parallel,jpp_matched,target-language specificity,EN prompt,51.31578947368422,32.36842105263158,70.0,1.0
+parallel,jpp_matched,target-language specificity,FR prompt,46.05263157894737,26.973684210526315,66.71052631578948,1.0
+fr-multilingual,j,language: EN fit - FR fit,"FR prompt, EN targets",28.409090909090907,18.18181818181818,38.63636363636363,1.0
+fr-multilingual,j,corpus: WikiText fit - EN fit,"FR prompt, EN targets",0.0,0.0,0.0,0.0
+fr-multilingual,j,"noise: EN fit, pool A - pool B","FR prompt, EN targets",0.0,0.0,0.0,0.0
+fr-multilingual,j,"noise: FR fit, pool A - pool B","FR prompt, EN targets",2.27272727272727,0.0,6.81818181818182,0.6564
+fr-multilingual,j,language: EN fit - FR fit,"FR prompt, FR targets",-15.90909090909091,-25.000000000000004,-6.818181818181817,0.0
+fr-multilingual,j,corpus: WikiText fit - EN fit,"FR prompt, FR targets",0.0,0.0,0.0,0.0
+fr-multilingual,j,"noise: EN fit, pool A - pool B","FR prompt, FR targets",0.0,0.0,0.0,0.0
+fr-multilingual,j,"noise: FR fit, pool A - pool B","FR prompt, FR targets",0.0,0.0,0.0,0.0
+fr-multilingual,j,target-language specificity,FR prompt,44.31818181818181,29.54545454545454,57.95454545454544,1.0
+fr-multilingual,r,language: EN fit - FR fit,"FR prompt, EN targets",20.454545454545453,9.0909090909091,31.818181818181817,1.0
+fr-multilingual,r,corpus: WikiText fit - EN fit,"FR prompt, EN targets",-4.545454545454547,-13.63636363636364,0.0,0.0
+fr-multilingual,r,"noise: EN fit, pool A - pool B","FR prompt, EN targets",0.0,0.0,0.0,0.0
+fr-multilingual,r,"noise: FR fit, pool A - pool B","FR prompt, EN targets",0.0,0.0,0.0,0.0
+fr-multilingual,r,language: EN fit - FR fit,"FR prompt, FR targets",-14.772727272727277,-25.0,-4.545454545454547,0.0
+fr-multilingual,r,corpus: WikiText fit - EN fit,"FR prompt, FR targets",-4.545454545454543,-13.636363636363633,0.0,0.0
+fr-multilingual,r,"noise: EN fit, pool A - pool B","FR prompt, FR targets",0.0,0.0,0.0,0.0
+fr-multilingual,r,"noise: FR fit, pool A - pool B","FR prompt, FR targets",-2.2727272727272663,-6.81818181818182,0.0,0.0
+fr-multilingual,r,target-language specificity,FR prompt,35.227272727272734,22.727272727272727,46.59090909090909,1.0
+fr-multilingual,jpp,language: EN fit - FR fit,"FR prompt, EN targets",20.454545454545453,9.090909090909093,34.09090909090909,1.0
+fr-multilingual,jpp,corpus: WikiText fit - EN fit,"FR prompt, EN targets",-1.136363636363626,-6.818181818181813,3.4090909090909065,0.282
+fr-multilingual,jpp,"noise: EN fit, pool A - pool B","FR prompt, EN targets",-6.818181818181827,-13.63636363636364,0.0,0.0
+fr-multilingual,jpp,"noise: FR fit, pool A - pool B","FR prompt, EN targets",2.2727272727272734,-9.0909090909091,15.909090909090914,0.5584
+fr-multilingual,jpp,language: EN fit - FR fit,"FR prompt, FR targets",-4.545454545454547,-12.499999999999996,3.40909090909091,0.1078
+fr-multilingual,jpp,corpus: WikiText fit - EN fit,"FR prompt, FR targets",-1.1363636363636331,-4.545454545454547,2.272727272727277,0.2336
+fr-multilingual,jpp,"noise: EN fit, pool A - pool B","FR prompt, FR targets",-2.27272727272727,-9.09090909090909,4.545454545454547,0.1852
+fr-multilingual,jpp,"noise: FR fit, pool A - pool B","FR prompt, FR targets",24.999999999999996,11.363636363636363,38.63636363636364,1.0
+fr-multilingual,jpp,target-language specificity,FR prompt,25.0,9.090909090909086,43.18181818181819,0.9992
+fr-multilingual,jpp_wen,language: EN fit - FR fit,"FR prompt, EN targets",48.86363636363637,35.227272727272734,63.63636363636364,1.0
+fr-multilingual,jpp_wen,corpus: WikiText fit - EN fit,"FR prompt, EN targets",4.545454545454547,-1.136363636363626,10.227272727272734,0.9288
+fr-multilingual,jpp_wen,"noise: EN fit, pool A - pool B","FR prompt, EN targets",0.0,-6.818181818181813,6.818181818181813,0.3412
+fr-multilingual,jpp_wen,"noise: FR fit, pool A - pool B","FR prompt, EN targets",6.818181818181817,0.0,13.63636363636364,0.97
+fr-multilingual,jpp_wen,language: EN fit - FR fit,"FR prompt, FR targets",-10.22727272727273,-20.454545454545453,-1.1363636363636367,0.009
+fr-multilingual,jpp_wen,corpus: WikiText fit - EN fit,"FR prompt, FR targets",-2.2727272727272734,-5.68181818181818,0.0,0.0
+fr-multilingual,jpp_wen,"noise: EN fit, pool A - pool B","FR prompt, FR targets",6.81818181818182,0.0,13.636363636363633,0.9736
+fr-multilingual,jpp_wen,"noise: FR fit, pool A - pool B","FR prompt, FR targets",0.0,-6.818181818181817,6.81818181818182,0.3538
+fr-multilingual,jpp_wen,target-language specificity,FR prompt,59.09090909090909,42.04545454545455,81.81818181818181,1.0
+fr-multilingual,jpp_wfr,language: EN fit - FR fit,"FR prompt, EN targets",26.136363636363633,17.045454545454547,38.63636363636363,1.0
+fr-multilingual,jpp_wfr,corpus: WikiText fit - EN fit,"FR prompt, EN targets",2.2727272727272805,-5.68181818181818,9.119318181817784,0.6854
+fr-multilingual,jpp_wfr,"noise: EN fit, pool A - pool B","FR prompt, EN targets",18.18181818181818,2.2727272727272663,34.09090909090909,0.9752
+fr-multilingual,jpp_wfr,"noise: FR fit, pool A - pool B","FR prompt, EN targets",15.909090909090907,4.5454545454545485,27.272727272727273,0.9988
+fr-multilingual,jpp_wfr,language: EN fit - FR fit,"FR prompt, FR targets",-45.45454545454545,-61.36363636363636,-30.68181818181818,0.0
+fr-multilingual,jpp_wfr,corpus: WikiText fit - EN fit,"FR prompt, FR targets",-12.500000000000002,-18.181818181818183,-5.681818181818185,0.0
+fr-multilingual,jpp_wfr,"noise: EN fit, pool A - pool B","FR prompt, FR targets",2.27272727272727,0.0,6.818181818181818,0.6564
+fr-multilingual,jpp_wfr,"noise: FR fit, pool A - pool B","FR prompt, FR targets",-6.81818181818182,-20.454545454545453,9.09090909090908,0.1366
+fr-multilingual,jpp_wfr,target-language specificity,FR prompt,71.5909090909091,50.0,98.86363636363635,1.0
+fr-multilingual,jpp_matched,language: EN fit - FR fit,"FR prompt, EN targets",48.86363636363637,35.227272727272734,63.63636363636363,1.0
+fr-multilingual,jpp_matched,corpus: WikiText fit - EN fit,"FR prompt, EN targets",4.545454545454547,-1.136363636363626,10.227272727272734,0.9288
+fr-multilingual,jpp_matched,"noise: EN fit, pool A - pool B","FR prompt, EN targets",0.0,-6.818181818181813,6.818181818181813,0.3412
+fr-multilingual,jpp_matched,"noise: FR fit, pool A - pool B","FR prompt, EN targets",15.909090909090907,4.5454545454545485,27.272727272727273,0.9988
+fr-multilingual,jpp_matched,language: EN fit - FR fit,"FR prompt, FR targets",-40.90909090909091,-55.68181818181819,-28.409090909090907,0.0
+fr-multilingual,jpp_matched,corpus: WikiText fit - EN fit,"FR prompt, FR targets",-2.2727272727272734,-5.68181818181818,0.0,0.0
+fr-multilingual,jpp_matched,"noise: EN fit, pool A - pool B","FR prompt, FR targets",6.81818181818182,0.0,13.636363636363633,0.9736
+fr-multilingual,jpp_matched,"noise: FR fit, pool A - pool B","FR prompt, FR targets",-6.81818181818182,-20.454545454545453,9.09090909090908,0.1366
+fr-multilingual,jpp_matched,target-language specificity,FR prompt,89.77272727272728,67.04545454545453,118.18181818181819,1.0
+"fr-multilingual, language name",j,language: EN fit - FR fit,"FR prompt, EN targets",0.0,0.0,0.0,0.0
+"fr-multilingual, language name",j,corpus: WikiText fit - EN fit,"FR prompt, EN targets",0.0,0.0,0.0,0.0
+"fr-multilingual, language name",j,"noise: EN fit, pool A - pool B","FR prompt, EN targets",0.0,0.0,0.0,0.0
+"fr-multilingual, language name",j,"noise: FR fit, pool A - pool B","FR prompt, EN targets",0.0,0.0,0.0,0.0
+"fr-multilingual, language name",j,language: EN fit - FR fit,"FR prompt, FR targets",0.0,0.0,0.0,0.0
+"fr-multilingual, language name",j,corpus: WikiText fit - EN fit,"FR prompt, FR targets",0.0,0.0,0.0,0.0
+"fr-multilingual, language name",j,"noise: EN fit, pool A - pool B","FR prompt, FR targets",0.0,0.0,0.0,0.0
+"fr-multilingual, language name",j,"noise: FR fit, pool A - pool B","FR prompt, FR targets",0.0,0.0,0.0,0.0
+"fr-multilingual, language name",j,target-language specificity,FR prompt,0.0,0.0,0.0,0.0
+"fr-multilingual, language name",r,language: EN fit - FR fit,"FR prompt, EN targets",0.0,0.0,0.0,0.0
+"fr-multilingual, language name",r,corpus: WikiText fit - EN fit,"FR prompt, EN targets",0.0,0.0,0.0,0.0
+"fr-multilingual, language name",r,"noise: EN fit, pool A - pool B","FR prompt, EN targets",0.0,0.0,0.0,0.0
+"fr-multilingual, language name",r,"noise: FR fit, pool A - pool B","FR prompt, EN targets",0.0,0.0,0.0,0.0
+"fr-multilingual, language name",r,language: EN fit - FR fit,"FR prompt, FR targets",0.0,0.0,0.0,0.0
+"fr-multilingual, language name",r,corpus: WikiText fit - EN fit,"FR prompt, FR targets",0.0,0.0,0.0,0.0
+"fr-multilingual, language name",r,"noise: EN fit, pool A - pool B","FR prompt, FR targets",0.0,0.0,0.0,0.0
+"fr-multilingual, language name",r,"noise: FR fit, pool A - pool B","FR prompt, FR targets",0.0,0.0,0.0,0.0
+"fr-multilingual, language name",r,target-language specificity,FR prompt,0.0,0.0,0.0,0.0
+"fr-multilingual, language name",jpp,language: EN fit - FR fit,"FR prompt, EN targets",45.45454545454545,27.272727272727266,63.63636363636365,1.0
+"fr-multilingual, language name",jpp,corpus: WikiText fit - EN fit,"FR prompt, EN targets",4.545454545454561,0.0,13.63636363636364,0.655
+"fr-multilingual, language name",jpp,"noise: EN fit, pool A - pool B","FR prompt, EN targets",-18.181818181818173,-45.45454545454546,0.0,0.0
+"fr-multilingual, language name",jpp,"noise: FR fit, pool A - pool B","FR prompt, EN targets",-18.181818181818183,-54.54545454545454,18.181818181818173,0.0894
+"fr-multilingual, language name",jpp,language: EN fit - FR fit,"FR prompt, FR targets",4.545454545454546,0.0,13.636363636363637,0.6368
+"fr-multilingual, language name",jpp,corpus: WikiText fit - EN fit,"FR prompt, FR targets",0.0,0.0,0.0,0.0
+"fr-multilingual, language name",jpp,"noise: EN fit, pool A - pool B","FR prompt, FR targets",-18.181818181818183,-45.45454545454545,0.0,0.0
+"fr-multilingual, language name",jpp,"noise: FR fit, pool A - pool B","FR prompt, FR targets",9.090909090909092,0.0,27.27272727272727,0.665
+"fr-multilingual, language name",jpp,target-language specificity,FR prompt,40.90909090909091,13.636363636363646,63.63636363636364,0.9994
+"fr-multilingual, language name",jpp_wen,language: EN fit - FR fit,"FR prompt, EN targets",86.36363636363637,63.63636363636364,100.0,1.0
+"fr-multilingual, language name",jpp_wen,corpus: WikiText fit - EN fit,"FR prompt, EN targets",9.09090909090908,0.0,22.72727272727272,0.8842
+"fr-multilingual, language name",jpp_wen,"noise: EN fit, pool A - pool B","FR prompt, EN targets",-9.09090909090908,-27.272727272727273,0.0,0.0
+"fr-multilingual, language name",jpp_wen,"noise: FR fit, pool A - pool B","FR prompt, EN targets",0.0,0.0,0.0,0.0
+"fr-multilingual, language name",jpp_wen,language: EN fit - FR fit,"FR prompt, FR targets",9.090909090909092,0.0,22.727272727272727,0.895
+"fr-multilingual, language name",jpp_wen,corpus: WikiText fit - EN fit,"FR prompt, FR targets",-9.090909090909092,-22.727272727272727,0.0,0.0
+"fr-multilingual, language name",jpp_wen,"noise: EN fit, pool A - pool B","FR prompt, FR targets",18.181818181818183,0.0,45.45454545454545,0.895
+"fr-multilingual, language name",jpp_wen,"noise: FR fit, pool A - pool B","FR prompt, FR targets",0.0,0.0,0.0,0.0
+"fr-multilingual, language name",jpp_wen,target-language specificity,FR prompt,77.27272727272728,54.545454545454554,95.45454545454545,1.0
+"fr-multilingual, language name",jpp_wfr,language: EN fit - FR fit,"FR prompt, EN targets",22.727272727272727,9.090909090909092,36.36363636363637,0.9994
+"fr-multilingual, language name",jpp_wfr,corpus: WikiText fit - EN fit,"FR prompt, EN targets",4.545454545454543,-22.72727272727273,31.81818181818182,0.5984
+"fr-multilingual, language name",jpp_wfr,"noise: EN fit, pool A - pool B","FR prompt, EN targets",45.45454545454545,18.181818181818183,72.72727272727273,0.9994
+"fr-multilingual, language name",jpp_wfr,"noise: FR fit, pool A - pool B","FR prompt, EN targets",0.0,0.0,0.0,0.0
+"fr-multilingual, language name",jpp_wfr,language: EN fit - FR fit,"FR prompt, FR targets",-63.63636363636364,-81.81818181818181,-45.45454545454545,0.0
+"fr-multilingual, language name",jpp_wfr,corpus: WikiText fit - EN fit,"FR prompt, FR targets",0.0,0.0,0.0,0.0
+"fr-multilingual, language name",jpp_wfr,"noise: EN fit, pool A - pool B","FR prompt, FR targets",0.0,0.0,0.0,0.0
+"fr-multilingual, language name",jpp_wfr,"noise: FR fit, pool A - pool B","FR prompt, FR targets",-36.363636363636374,-72.72727272727273,0.0,0.018
+"fr-multilingual, language name",jpp_wfr,target-language specificity,FR prompt,86.36363636363637,63.63636363636363,104.54545454545456,1.0
+"fr-multilingual, language name",jpp_matched,language: EN fit - FR fit,"FR prompt, EN targets",86.36363636363637,63.63636363636364,100.0,1.0
+"fr-multilingual, language name",jpp_matched,corpus: WikiText fit - EN fit,"FR prompt, EN targets",9.09090909090908,0.0,22.72727272727272,0.8842
+"fr-multilingual, language name",jpp_matched,"noise: EN fit, pool A - pool B","FR prompt, EN targets",-9.09090909090908,-27.272727272727273,0.0,0.0
+"fr-multilingual, language name",jpp_matched,"noise: FR fit, pool A - pool B","FR prompt, EN targets",0.0,0.0,0.0,0.0
+"fr-multilingual, language name",jpp_matched,language: EN fit - FR fit,"FR prompt, FR targets",-54.54545454545455,-68.18181818181819,-40.90909090909091,0.0
+"fr-multilingual, language name",jpp_matched,corpus: WikiText fit - EN fit,"FR prompt, FR targets",-9.090909090909092,-22.727272727272727,0.0,0.0
+"fr-multilingual, language name",jpp_matched,"noise: EN fit, pool A - pool B","FR prompt, FR targets",18.181818181818183,0.0,45.45454545454545,0.895
+"fr-multilingual, language name",jpp_matched,"noise: FR fit, pool A - pool B","FR prompt, FR targets",-36.363636363636374,-72.72727272727273,0.0,0.018
+"fr-multilingual, language name",jpp_matched,target-language specificity,FR prompt,140.90909090909093,104.54545454545456,168.1818181818182,1.0
+"fr-multilingual, category",j,language: EN fit - FR fit,"FR prompt, EN targets",30.0,0.0,60.0,0.969
+"fr-multilingual, category",j,corpus: WikiText fit - EN fit,"FR prompt, EN targets",0.0,0.0,0.0,0.0
+"fr-multilingual, category",j,"noise: EN fit, pool A - pool B","FR prompt, EN targets",0.0,0.0,0.0,0.0
+"fr-multilingual, category",j,"noise: FR fit, pool A - pool B","FR prompt, EN targets",0.0,0.0,0.0,0.0
+"fr-multilingual, category",j,language: EN fit - FR fit,"FR prompt, FR targets",-10.0,-30.0,0.0,0.0
+"fr-multilingual, category",j,corpus: WikiText fit - EN fit,"FR prompt, FR targets",0.0,0.0,0.0,0.0
+"fr-multilingual, category",j,"noise: EN fit, pool A - pool B","FR prompt, FR targets",0.0,0.0,0.0,0.0
+"fr-multilingual, category",j,"noise: FR fit, pool A - pool B","FR prompt, FR targets",0.0,0.0,0.0,0.0
+"fr-multilingual, category",j,target-language specificity,FR prompt,40.0,10.0,70.0,0.9944
+"fr-multilingual, category",r,language: EN fit - FR fit,"FR prompt, EN targets",30.0,0.0,60.0,0.9724
+"fr-multilingual, category",r,corpus: WikiText fit - EN fit,"FR prompt, EN targets",0.0,0.0,0.0,0.0
+"fr-multilingual, category",r,"noise: EN fit, pool A - pool B","FR prompt, EN targets",0.0,0.0,0.0,0.0
+"fr-multilingual, category",r,"noise: FR fit, pool A - pool B","FR prompt, EN targets",0.0,0.0,0.0,0.0
+"fr-multilingual, category",r,language: EN fit - FR fit,"FR prompt, FR targets",-30.0,-60.0,0.0,0.0
+"fr-multilingual, category",r,corpus: WikiText fit - EN fit,"FR prompt, FR targets",0.0,0.0,0.0,0.0
+"fr-multilingual, category",r,"noise: EN fit, pool A - pool B","FR prompt, FR targets",0.0,0.0,0.0,0.0
+"fr-multilingual, category",r,"noise: FR fit, pool A - pool B","FR prompt, FR targets",0.0,0.0,0.0,0.0
+"fr-multilingual, category",r,target-language specificity,FR prompt,60.0,30.0,90.0,0.9998
+"fr-multilingual, category",jpp,language: EN fit - FR fit,"FR prompt, EN targets",10.0,0.0,30.0,0.6412
+"fr-multilingual, category",jpp,corpus: WikiText fit - EN fit,"FR prompt, EN targets",0.0,0.0,0.0,0.0
+"fr-multilingual, category",jpp,"noise: EN fit, pool A - pool B","FR prompt, EN targets",-10.0,-30.0,0.0,0.0
+"fr-multilingual, category",jpp,"noise: FR fit, pool A - pool B","FR prompt, EN targets",10.0,0.0,30.0,0.6656
+"fr-multilingual, category",jpp,language: EN fit - FR fit,"FR prompt, FR targets",0.0,0.0,0.0,0.0
+"fr-multilingual, category",jpp,corpus: WikiText fit - EN fit,"FR prompt, FR targets",0.0,0.0,0.0,0.0
+"fr-multilingual, category",jpp,"noise: EN fit, pool A - pool B","FR prompt, FR targets",0.0,0.0,0.0,0.0
+"fr-multilingual, category",jpp,"noise: FR fit, pool A - pool B","FR prompt, FR targets",0.0,0.0,0.0,0.0
+"fr-multilingual, category",jpp,target-language specificity,FR prompt,10.0,0.0,30.0,0.6412
+"fr-multilingual, category",jpp_wen,language: EN fit - FR fit,"FR prompt, EN targets",30.0,5.0,55.0,0.9936
+"fr-multilingual, category",jpp_wen,corpus: WikiText fit - EN fit,"FR prompt, EN targets",5.0,-15.0,30.0,0.5522
+"fr-multilingual, category",jpp_wen,"noise: EN fit, pool A - pool B","FR prompt, EN targets",10.0,0.0,30.0,0.6576
+"fr-multilingual, category",jpp_wen,"noise: FR fit, pool A - pool B","FR prompt, EN targets",10.0,0.0,30.0,0.6412
+"fr-multilingual, category",jpp_wen,language: EN fit - FR fit,"FR prompt, FR targets",-10.0,-30.0,0.0,0.0
+"fr-multilingual, category",jpp_wen,corpus: WikiText fit - EN fit,"FR prompt, FR targets",0.0,0.0,0.0,0.0
+"fr-multilingual, category",jpp_wen,"noise: EN fit, pool A - pool B","FR prompt, FR targets",0.0,0.0,0.0,0.0
+"fr-multilingual, category",jpp_wen,"noise: FR fit, pool A - pool B","FR prompt, FR targets",0.0,0.0,0.0,0.0
+"fr-multilingual, category",jpp_wen,target-language specificity,FR prompt,40.0,15.0,65.0,0.9994
+"fr-multilingual, category",jpp_wfr,language: EN fit - FR fit,"FR prompt, EN targets",25.0,0.0,50.0,0.9636
+"fr-multilingual, category",jpp_wfr,corpus: WikiText fit - EN fit,"FR prompt, EN targets",10.0,0.0,25.0,0.9006
+"fr-multilingual, category",jpp_wfr,"noise: EN fit, pool A - pool B","FR prompt, EN targets",20.0,0.0,50.0,0.9006
+"fr-multilingual, category",jpp_wfr,"noise: FR fit, pool A - pool B","FR prompt, EN targets",30.0,0.0,60.0,0.9728
+"fr-multilingual, category",jpp_wfr,language: EN fit - FR fit,"FR prompt, FR targets",-30.0,-50.0,-10.0,0.0
+"fr-multilingual, category",jpp_wfr,corpus: WikiText fit - EN fit,"FR prompt, FR targets",0.0,0.0,0.0,0.0
+"fr-multilingual, category",jpp_wfr,"noise: EN fit, pool A - pool B","FR prompt, FR targets",0.0,0.0,0.0,0.0
+"fr-multilingual, category",jpp_wfr,"noise: FR fit, pool A - pool B","FR prompt, FR targets",20.0,-20.0,60.0,0.7724
+"fr-multilingual, category",jpp_wfr,target-language specificity,FR prompt,55.0,20.0,95.0,0.9966
+"fr-multilingual, category",jpp_matched,language: EN fit - FR fit,"FR prompt, EN targets",30.0,10.0,50.0,0.9994
+"fr-multilingual, category",jpp_matched,corpus: WikiText fit - EN fit,"FR prompt, EN targets",5.0,-15.0,30.0,0.5522
+"fr-multilingual, category",jpp_matched,"noise: EN fit, pool A - pool B","FR prompt, EN targets",10.0,0.0,30.0,0.6576
+"fr-multilingual, category",jpp_matched,"noise: FR fit, pool A - pool B","FR prompt, EN targets",30.0,0.0,60.0,0.9728
+"fr-multilingual, category",jpp_matched,language: EN fit - FR fit,"FR prompt, FR targets",-30.0,-50.0,-10.0,0.0
+"fr-multilingual, category",jpp_matched,corpus: WikiText fit - EN fit,"FR prompt, FR targets",0.0,0.0,0.0,0.0
+"fr-multilingual, category",jpp_matched,"noise: EN fit, pool A - pool B","FR prompt, FR targets",0.0,0.0,0.0,0.0
+"fr-multilingual, category",jpp_matched,"noise: FR fit, pool A - pool B","FR prompt, FR targets",20.0,-20.0,60.0,0.7724
+"fr-multilingual, category",jpp_matched,target-language specificity,FR prompt,60.0,30.0,90.0,1.0
+"fr-multilingual, operand",j,language: EN fit - FR fit,"FR prompt, EN targets",68.18181818181819,40.90909090909091,90.9090909090909,1.0
+"fr-multilingual, operand",j,corpus: WikiText fit - EN fit,"FR prompt, EN targets",0.0,0.0,0.0,0.0
+"fr-multilingual, operand",j,"noise: EN fit, pool A - pool B","FR prompt, EN targets",0.0,0.0,0.0,0.0
+"fr-multilingual, operand",j,"noise: FR fit, pool A - pool B","FR prompt, EN targets",9.090909090909092,0.0,27.27272727272727,0.6458
+"fr-multilingual, operand",j,language: EN fit - FR fit,"FR prompt, FR targets",-54.54545454545454,-81.81818181818183,-27.27272727272727,0.0
+"fr-multilingual, operand",j,corpus: WikiText fit - EN fit,"FR prompt, FR targets",0.0,0.0,0.0,0.0
+"fr-multilingual, operand",j,"noise: EN fit, pool A - pool B","FR prompt, FR targets",0.0,0.0,0.0,0.0
+"fr-multilingual, operand",j,"noise: FR fit, pool A - pool B","FR prompt, FR targets",0.0,0.0,0.0,0.0
+"fr-multilingual, operand",j,target-language specificity,FR prompt,122.72727272727272,72.72727272727272,168.1818181818182,1.0
+"fr-multilingual, operand",r,language: EN fit - FR fit,"FR prompt, EN targets",36.36363636363637,9.090909090909086,63.63636363636364,0.9938
+"fr-multilingual, operand",r,corpus: WikiText fit - EN fit,"FR prompt, EN targets",-9.0909090909091,-27.272727272727288,0.0,0.0
+"fr-multilingual, operand",r,"noise: EN fit, pool A - pool B","FR prompt, EN targets",0.0,0.0,0.0,0.0
+"fr-multilingual, operand",r,"noise: FR fit, pool A - pool B","FR prompt, EN targets",0.0,0.0,0.0,0.0
+"fr-multilingual, operand",r,language: EN fit - FR fit,"FR prompt, FR targets",-31.818181818181813,-59.09090909090909,-9.090909090909088,0.0
+"fr-multilingual, operand",r,corpus: WikiText fit - EN fit,"FR prompt, FR targets",-9.090909090909092,-27.27272727272727,0.0,0.0
+"fr-multilingual, operand",r,"noise: EN fit, pool A - pool B","FR prompt, FR targets",0.0,0.0,0.0,0.0
+"fr-multilingual, operand",r,"noise: FR fit, pool A - pool B","FR prompt, FR targets",-9.090909090909086,-27.27272727272727,0.0,0.0
+"fr-multilingual, operand",r,target-language specificity,FR prompt,68.18181818181819,27.272727272727288,109.0909090909091,1.0
+"fr-multilingual, operand",jpp,language: EN fit - FR fit,"FR prompt, EN targets",9.0909090909091,0.0,27.272727272727288,0.6444
+"fr-multilingual, operand",jpp,corpus: WikiText fit - EN fit,"FR prompt, EN targets",-4.545454545454547,-13.63636363636364,0.0,0.0
+"fr-multilingual, operand",jpp,"noise: EN fit, pool A - pool B","FR prompt, EN targets",0.0,0.0,0.0,0.0
+"fr-multilingual, operand",jpp,"noise: FR fit, pool A - pool B","FR prompt, EN targets",0.0,0.0,0.0,0.0
+"fr-multilingual, operand",jpp,language: EN fit - FR fit,"FR prompt, FR targets",-31.818181818181813,-50.00000000000001,-13.636363636363635,0.0
+"fr-multilingual, operand",jpp,corpus: WikiText fit - EN fit,"FR prompt, FR targets",0.0,-13.636363636363635,13.636363636363635,0.3614
+"fr-multilingual, operand",jpp,"noise: EN fit, pool A - pool B","FR prompt, FR targets",9.090909090909092,0.0,27.27272727272727,0.6492
+"fr-multilingual, operand",jpp,"noise: FR fit, pool A - pool B","FR prompt, FR targets",54.54545454545454,27.27272727272727,81.81818181818183,0.9998
+"fr-multilingual, operand",jpp,target-language specificity,FR prompt,40.909090909090914,18.18181818181818,68.1818181818182,1.0
+"fr-multilingual, operand",jpp_wen,language: EN fit - FR fit,"FR prompt, EN targets",63.63636363636364,36.36363636363636,86.36363636363636,1.0
+"fr-multilingual, operand",jpp_wen,corpus: WikiText fit - EN fit,"FR prompt, EN targets",0.0,0.0,0.0,0.0
+"fr-multilingual, operand",jpp_wen,"noise: EN fit, pool A - pool B","FR prompt, EN targets",0.0,0.0,0.0,0.0
+"fr-multilingual, operand",jpp_wen,"noise: FR fit, pool A - pool B","FR prompt, EN targets",18.181818181818183,0.0,45.45454545454545,0.8842
+"fr-multilingual, operand",jpp_wen,language: EN fit - FR fit,"FR prompt, FR targets",-31.81818181818182,-59.090909090909086,-9.090909090909088,0.0
+"fr-multilingual, operand",jpp_wen,corpus: WikiText fit - EN fit,"FR prompt, FR targets",0.0,-13.636363636363635,13.636363636363635,0.3614
+"fr-multilingual, operand",jpp_wen,"noise: EN fit, pool A - pool B","FR prompt, FR targets",9.090909090909092,0.0,27.27272727272727,0.6492
+"fr-multilingual, operand",jpp_wen,"noise: FR fit, pool A - pool B","FR prompt, FR targets",0.0,-27.27272727272727,27.27272727272727,0.3516
+"fr-multilingual, operand",jpp_wen,target-language specificity,FR prompt,95.45454545454547,50.0,140.9090909090909,1.0
+"fr-multilingual, operand",jpp_wfr,language: EN fit - FR fit,"FR prompt, EN targets",40.90909090909091,22.72727272727273,59.09090909090909,1.0
+"fr-multilingual, operand",jpp_wfr,corpus: WikiText fit - EN fit,"FR prompt, EN targets",-4.545454545454547,-36.36363636363637,22.727272727272734,0.3574
+"fr-multilingual, operand",jpp_wfr,"noise: EN fit, pool A - pool B","FR prompt, EN targets",-9.090909090909093,-36.363636363636374,18.181818181818194,0.1886
+"fr-multilingual, operand",jpp_wfr,"noise: FR fit, pool A - pool B","FR prompt, EN targets",36.36363636363637,9.090909090909092,63.63636363636363,0.9918
+"fr-multilingual, operand",jpp_wfr,language: EN fit - FR fit,"FR prompt, FR targets",-68.18181818181819,-90.9090909090909,-40.90909090909091,0.0
+"fr-multilingual, operand",jpp_wfr,corpus: WikiText fit - EN fit,"FR prompt, FR targets",0.0,0.0,0.0,0.0
+"fr-multilingual, operand",jpp_wfr,"noise: EN fit, pool A - pool B","FR prompt, FR targets",0.0,0.0,0.0,0.0
+"fr-multilingual, operand",jpp_wfr,"noise: FR fit, pool A - pool B","FR prompt, FR targets",-9.0909090909091,-27.272727272727288,0.0,0.0
+"fr-multilingual, operand",jpp_wfr,target-language specificity,FR prompt,109.0909090909091,68.18181818181817,150.0,1.0
+"fr-multilingual, operand",jpp_matched,language: EN fit - FR fit,"FR prompt, EN targets",54.54545454545455,31.818181818181813,77.27272727272728,1.0
+"fr-multilingual, operand",jpp_matched,corpus: WikiText fit - EN fit,"FR prompt, EN targets",0.0,0.0,0.0,0.0
+"fr-multilingual, operand",jpp_matched,"noise: EN fit, pool A - pool B","FR prompt, EN targets",0.0,0.0,0.0,0.0
+"fr-multilingual, operand",jpp_matched,"noise: FR fit, pool A - pool B","FR prompt, EN targets",36.36363636363637,9.090909090909092,63.63636363636363,0.9918
+"fr-multilingual, operand",jpp_matched,language: EN fit - FR fit,"FR prompt, FR targets",-63.63636363636364,-86.36363636363637,-36.36363636363636,0.0
+"fr-multilingual, operand",jpp_matched,corpus: WikiText fit - EN fit,"FR prompt, FR targets",0.0,-13.636363636363635,13.636363636363635,0.3614
+"fr-multilingual, operand",jpp_matched,"noise: EN fit, pool A - pool B","FR prompt, FR targets",9.090909090909092,0.0,27.27272727272727,0.6492
+"fr-multilingual, operand",jpp_matched,"noise: FR fit, pool A - pool B","FR prompt, FR targets",-9.0909090909091,-27.272727272727288,0.0,0.0
+"fr-multilingual, operand",jpp_matched,target-language specificity,FR prompt,118.18181818181819,72.72727272727272,163.63636363636363,1.0
+"fr-multilingual, answer",j,language: EN fit - FR fit,"FR prompt, EN targets",10.0,0.0,30.0,0.6504
+"fr-multilingual, answer",j,corpus: WikiText fit - EN fit,"FR prompt, EN targets",0.0,0.0,0.0,0.0
+"fr-multilingual, answer",j,"noise: EN fit, pool A - pool B","FR prompt, EN targets",0.0,0.0,0.0,0.0
+"fr-multilingual, answer",j,"noise: FR fit, pool A - pool B","FR prompt, EN targets",0.0,0.0,0.0,0.0
+"fr-multilingual, answer",j,language: EN fit - FR fit,"FR prompt, FR targets",0.0,0.0,0.0,0.0
+"fr-multilingual, answer",j,corpus: WikiText fit - EN fit,"FR prompt, FR targets",0.0,0.0,0.0,0.0
+"fr-multilingual, answer",j,"noise: EN fit, pool A - pool B","FR prompt, FR targets",0.0,0.0,0.0,0.0
+"fr-multilingual, answer",j,"noise: FR fit, pool A - pool B","FR prompt, FR targets",0.0,0.0,0.0,0.0
+"fr-multilingual, answer",j,target-language specificity,FR prompt,10.0,0.0,30.0,0.6504
+"fr-multilingual, answer",r,language: EN fit - FR fit,"FR prompt, EN targets",10.0,0.0,30.0,0.6504
+"fr-multilingual, answer",r,corpus: WikiText fit - EN fit,"FR prompt, EN targets",0.0,0.0,0.0,0.0
+"fr-multilingual, answer",r,"noise: EN fit, pool A - pool B","FR prompt, EN targets",0.0,0.0,0.0,0.0
+"fr-multilingual, answer",r,"noise: FR fit, pool A - pool B","FR prompt, EN targets",0.0,0.0,0.0,0.0
+"fr-multilingual, answer",r,language: EN fit - FR fit,"FR prompt, FR targets",0.0,0.0,0.0,0.0
+"fr-multilingual, answer",r,corpus: WikiText fit - EN fit,"FR prompt, FR targets",0.0,0.0,0.0,0.0
+"fr-multilingual, answer",r,"noise: EN fit, pool A - pool B","FR prompt, FR targets",0.0,0.0,0.0,0.0
+"fr-multilingual, answer",r,"noise: FR fit, pool A - pool B","FR prompt, FR targets",0.0,0.0,0.0,0.0
+"fr-multilingual, answer",r,target-language specificity,FR prompt,10.0,0.0,30.0,0.6504
+"fr-multilingual, answer",jpp,language: EN fit - FR fit,"FR prompt, EN targets",5.0,0.0,15.0,0.6504
+"fr-multilingual, answer",jpp,corpus: WikiText fit - EN fit,"FR prompt, EN targets",0.0,0.0,0.0,0.0
+"fr-multilingual, answer",jpp,"noise: EN fit, pool A - pool B","FR prompt, EN targets",0.0,0.0,0.0,0.0
+"fr-multilingual, answer",jpp,"noise: FR fit, pool A - pool B","FR prompt, EN targets",10.0,0.0,30.0,0.6504
+"fr-multilingual, answer",jpp,language: EN fit - FR fit,"FR prompt, FR targets",15.0,0.0,30.0,0.9664
+"fr-multilingual, answer",jpp,corpus: WikiText fit - EN fit,"FR prompt, FR targets",-5.0,-15.0,0.0,0.0
+"fr-multilingual, answer",jpp,"noise: EN fit, pool A - pool B","FR prompt, FR targets",0.0,0.0,0.0,0.0
+"fr-multilingual, answer",jpp,"noise: FR fit, pool A - pool B","FR prompt, FR targets",30.0,0.0,60.0,0.9664
+"fr-multilingual, answer",jpp,target-language specificity,FR prompt,-10.0,-30.0,10.0,0.0964
+"fr-multilingual, answer",jpp_wen,language: EN fit - FR fit,"FR prompt, EN targets",0.0,0.0,0.0,0.0
+"fr-multilingual, answer",jpp_wen,corpus: WikiText fit - EN fit,"FR prompt, EN targets",5.0,0.0,15.0,0.649
+"fr-multilingual, answer",jpp_wen,"noise: EN fit, pool A - pool B","FR prompt, EN targets",0.0,0.0,0.0,0.0
+"fr-multilingual, answer",jpp_wen,"noise: FR fit, pool A - pool B","FR prompt, EN targets",0.0,0.0,0.0,0.0
+"fr-multilingual, answer",jpp_wen,language: EN fit - FR fit,"FR prompt, FR targets",0.0,0.0,0.0,0.0
+"fr-multilingual, answer",jpp_wen,corpus: WikiText fit - EN fit,"FR prompt, FR targets",0.0,0.0,0.0,0.0
+"fr-multilingual, answer",jpp_wen,"noise: EN fit, pool A - pool B","FR prompt, FR targets",0.0,0.0,0.0,0.0
+"fr-multilingual, answer",jpp_wen,"noise: FR fit, pool A - pool B","FR prompt, FR targets",0.0,0.0,0.0,0.0
+"fr-multilingual, answer",jpp_wen,target-language specificity,FR prompt,0.0,0.0,0.0,0.0
+"fr-multilingual, answer",jpp_wfr,language: EN fit - FR fit,"FR prompt, EN targets",5.0,0.0,15.0,0.6504
+"fr-multilingual, answer",jpp_wfr,corpus: WikiText fit - EN fit,"FR prompt, EN targets",5.0,0.0,15.0,0.6504
+"fr-multilingual, answer",jpp_wfr,"noise: EN fit, pool A - pool B","FR prompt, EN targets",10.0,0.0,30.0,0.6504
+"fr-multilingual, answer",jpp_wfr,"noise: FR fit, pool A - pool B","FR prompt, EN targets",0.0,0.0,0.0,0.0
+"fr-multilingual, answer",jpp_wfr,language: EN fit - FR fit,"FR prompt, FR targets",-5.0,-15.0,0.0,0.0
+"fr-multilingual, answer",jpp_wfr,corpus: WikiText fit - EN fit,"FR prompt, FR targets",-55.0,-80.0,-30.0,0.0
+"fr-multilingual, answer",jpp_wfr,"noise: EN fit, pool A - pool B","FR prompt, FR targets",10.0,0.0,30.0,0.6352
+"fr-multilingual, answer",jpp_wfr,"noise: FR fit, pool A - pool B","FR prompt, FR targets",0.0,0.0,0.0,0.0
+"fr-multilingual, answer",jpp_wfr,target-language specificity,FR prompt,10.0,0.0,25.0,0.888
+"fr-multilingual, answer",jpp_matched,language: EN fit - FR fit,"FR prompt, EN targets",10.0,0.0,30.0,0.6504
+"fr-multilingual, answer",jpp_matched,corpus: WikiText fit - EN fit,"FR prompt, EN targets",5.0,0.0,15.0,0.649
+"fr-multilingual, answer",jpp_matched,"noise: EN fit, pool A - pool B","FR prompt, EN targets",0.0,0.0,0.0,0.0
+"fr-multilingual, answer",jpp_matched,"noise: FR fit, pool A - pool B","FR prompt, EN targets",0.0,0.0,0.0,0.0
+"fr-multilingual, answer",jpp_matched,language: EN fit - FR fit,"FR prompt, FR targets",0.0,0.0,0.0,0.0
+"fr-multilingual, answer",jpp_matched,corpus: WikiText fit - EN fit,"FR prompt, FR targets",0.0,0.0,0.0,0.0
+"fr-multilingual, answer",jpp_matched,"noise: EN fit, pool A - pool B","FR prompt, FR targets",0.0,0.0,0.0,0.0
+"fr-multilingual, answer",jpp_matched,"noise: FR fit, pool A - pool B","FR prompt, FR targets",0.0,0.0,0.0,0.0
+"fr-multilingual, answer",jpp_matched,target-language specificity,FR prompt,10.0,0.0,30.0,0.6504

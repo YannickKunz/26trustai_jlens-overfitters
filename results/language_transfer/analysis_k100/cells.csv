@@ -1,0 +1,267 @@
+unit,lens,fit,condition,value,ci_low,ci_high,share_above_0
+parallel,logit,none,"EN prompt, EN targets",47.631578947368425,35.0,55.52631578947369,1.0
+parallel,logit,none,"EN prompt, FR targets",20.0,5.0,35.0,0.9942
+parallel,logit,none,"FR prompt, EN targets",40.26315789473684,22.63157894736842,55.52631578947369,1.0
+parallel,logit,none,"FR prompt, FR targets",35.0,20.0,50.0,1.0
+parallel,j,wikitext,"EN prompt, EN targets",76.3157894736842,65.78947368421053,86.8421052631579,1.0
+parallel,j,wikitext,"EN prompt, FR targets",25.0,10.0,40.0,0.9994
+parallel,j,wikitext,"FR prompt, EN targets",48.1578947368421,30.526315789473685,65.78947368421053,1.0
+parallel,j,wikitext,"FR prompt, FR targets",35.0,20.0,50.0,1.0
+parallel,j,en,"EN prompt, EN targets",85.52631578947368,75.0,94.73684210526316,1.0
+parallel,j,en,"EN prompt, FR targets",25.0,10.0,40.0,0.9994
+parallel,j,en,"FR prompt, EN targets",58.68421052631578,40.78947368421053,76.57894736842105,1.0
+parallel,j,en,"FR prompt, FR targets",35.0,20.0,50.0,1.0
+parallel,j,fr,"EN prompt, EN targets",76.3157894736842,65.78947368421052,86.84210526315789,1.0
+parallel,j,fr,"EN prompt, FR targets",43.15789473684211,25.263157894736842,61.05263157894737,1.0
+parallel,j,fr,"FR prompt, EN targets",41.578947368421055,25.263157894736842,56.578947368421055,1.0
+parallel,j,fr,"FR prompt, FR targets",45.26315789473684,30.0,58.15789473684211,1.0
+parallel,r,wikitext,"EN prompt, EN targets",78.94736842105263,68.42105263157895,89.47368421052632,1.0
+parallel,r,wikitext,"EN prompt, FR targets",25.0,10.0,40.0,0.9994
+parallel,r,wikitext,"FR prompt, EN targets",63.421052631578945,48.1578947368421,76.3157894736842,1.0
+parallel,r,wikitext,"FR prompt, FR targets",35.0,20.0,50.0,1.0
+parallel,r,en,"EN prompt, EN targets",80.39473684210526,68.6842105263158,90.7927631578947,1.0
+parallel,r,en,"EN prompt, FR targets",25.0,10.0,40.0,0.9994
+parallel,r,en,"FR prompt, EN targets",63.421052631578945,48.1578947368421,76.3157894736842,1.0
+parallel,r,en,"FR prompt, FR targets",35.0,20.0,50.0,1.0
+parallel,r,fr,"EN prompt, EN targets",71.3157894736842,56.05263157894736,84.21052631578947,1.0
+parallel,r,fr,"EN prompt, FR targets",37.89473684210526,20.263157894736842,53.72368421052574,1.0
+parallel,r,fr,"FR prompt, EN targets",40.0,25.0,50.0,1.0
+parallel,r,fr,"FR prompt, FR targets",42.63157894736842,27.631578947368418,55.263157894736835,1.0
+parallel,jpp,wikitext,"EN prompt, EN targets",90.78947368421052,81.57894736842105,98.68421052631578,1.0
+parallel,jpp,wikitext,"EN prompt, FR targets",22.5,7.5,37.5,0.9994
+parallel,jpp,wikitext,"FR prompt, EN targets",85.52631578947368,76.31578947368422,93.42105263157896,1.0
+parallel,jpp,wikitext,"FR prompt, FR targets",30.0,17.5,42.5,1.0
+parallel,jpp,en,"EN prompt, EN targets",93.42105263157896,86.84210526315789,98.68421052631578,1.0
+parallel,jpp,en,"EN prompt, FR targets",25.0,10.0,40.0,0.9994
+parallel,jpp,en,"FR prompt, EN targets",81.84210526315789,70.39473684210526,92.10526315789474,1.0
+parallel,jpp,en,"FR prompt, FR targets",40.0,25.0,50.0,1.0
+parallel,jpp,fr,"EN prompt, EN targets",89.47368421052633,80.26315789473685,97.36842105263158,1.0
+parallel,jpp,fr,"EN prompt, FR targets",44.60526315789474,26.973684210526315,62.10526315789474,1.0
+parallel,jpp,fr,"FR prompt, EN targets",64.86842105263159,49.86513157894736,78.94736842105263,1.0
+parallel,jpp,fr,"FR prompt, FR targets",61.05263157894737,46.973684210526315,74.07894736842105,1.0
+parallel,jpp_wen,wikitext,"EN prompt, EN targets",90.78947368421052,81.57894736842105,98.68421052631578,1.0
+parallel,jpp_wen,wikitext,"EN prompt, FR targets",25.0,10.0,40.0,0.9994
+parallel,jpp_wen,wikitext,"FR prompt, EN targets",78.94736842105263,68.42105263157896,88.15789473684211,1.0
+parallel,jpp_wen,wikitext,"FR prompt, FR targets",35.0,20.0,50.0,1.0
+parallel,jpp_wen,en,"EN prompt, EN targets",93.42105263157896,85.52631578947368,100.0,1.0
+parallel,jpp_wen,en,"EN prompt, FR targets",26.31578947368421,10.0,41.32236842105253,0.9998
+parallel,jpp_wen,en,"FR prompt, EN targets",92.23684210526315,83.42105263157895,98.68421052631578,1.0
+parallel,jpp_wen,en,"FR prompt, FR targets",35.0,20.0,50.0,1.0
+parallel,jpp_wen,fr,"EN prompt, EN targets",85.52631578947368,75.0,94.73684210526316,1.0
+parallel,jpp_wen,fr,"EN prompt, FR targets",41.8421052631579,24.210526315789473,58.42105263157895,1.0
+parallel,jpp_wen,fr,"FR prompt, EN targets",56.97368421052632,43.15789473684211,69.86842105263158,1.0
+parallel,jpp_wen,fr,"FR prompt, FR targets",51.71052631578947,39.078947368421055,63.15789473684211,1.0
+parallel,jpp_wfr,wikitext,"EN prompt, EN targets",82.89473684210526,73.68421052631578,92.10526315789474,1.0
+parallel,jpp_wfr,wikitext,"EN prompt, FR targets",26.31578947368421,10.0,41.32236842105253,0.9998
+parallel,jpp_wfr,wikitext,"FR prompt, EN targets",62.368421052631575,48.28947368421052,75.54605263157866,1.0
+parallel,jpp_wfr,wikitext,"FR prompt, FR targets",22.63157894736842,7.7631578947368425,37.76315789473684,0.9996
+parallel,jpp_wfr,en,"EN prompt, EN targets",82.89473684210526,73.68421052631578,92.10526315789474,1.0
+parallel,jpp_wfr,en,"EN prompt, FR targets",23.81578947368421,8.81578947368421,38.815789473684205,0.9998
+parallel,jpp_wfr,en,"FR prompt, EN targets",58.289473684210535,44.473684210526315,70.0,1.0
+parallel,jpp_wfr,en,"FR prompt, FR targets",36.315789473684205,21.315789473684212,50.0,1.0
+parallel,jpp_wfr,fr,"EN prompt, EN targets",81.71052631578948,71.3157894736842,90.92105263157896,1.0
+parallel,jpp_wfr,fr,"EN prompt, FR targets",53.421052631578945,38.28618421052631,67.24013157894733,1.0
+parallel,jpp_wfr,fr,"FR prompt, EN targets",51.973684210526315,36.71052631578947,67.10526315789474,1.0
+parallel,jpp_wfr,fr,"FR prompt, FR targets",58.421052631578945,41.84210526315789,72.91447368421024,1.0
+parallel,jpp_matched,wikitext,"EN prompt, EN targets",90.78947368421052,81.57894736842105,98.68421052631578,1.0
+parallel,jpp_matched,wikitext,"EN prompt, FR targets",25.0,10.0,40.0,0.9994
+parallel,jpp_matched,wikitext,"FR prompt, EN targets",78.94736842105263,68.42105263157896,88.15789473684211,1.0
+parallel,jpp_matched,wikitext,"FR prompt, FR targets",35.0,20.0,50.0,1.0
+parallel,jpp_matched,en,"EN prompt, EN targets",93.42105263157896,85.52631578947368,100.0,1.0
+parallel,jpp_matched,en,"EN prompt, FR targets",26.31578947368421,10.0,41.32236842105253,0.9998
+parallel,jpp_matched,en,"FR prompt, EN targets",92.23684210526315,83.42105263157895,98.68421052631578,1.0
+parallel,jpp_matched,en,"FR prompt, FR targets",35.0,20.0,50.0,1.0
+parallel,jpp_matched,fr,"EN prompt, EN targets",81.71052631578948,71.3157894736842,90.92105263157896,1.0
+parallel,jpp_matched,fr,"EN prompt, FR targets",53.421052631578945,38.28618421052631,67.24013157894733,1.0
+parallel,jpp_matched,fr,"FR prompt, EN targets",51.973684210526315,36.71052631578947,67.10526315789474,1.0
+parallel,jpp_matched,fr,"FR prompt, FR targets",58.421052631578945,41.84210526315789,72.91447368421024,1.0
+fr-multilingual,logit,none,"FR prompt, EN targets",54.54545454545454,38.63636363636363,68.18181818181817,1.0
+fr-multilingual,logit,none,"FR prompt, FR targets",38.63636363636363,31.818181818181817,45.45454545454545,1.0
+fr-multilingual,j,wikitext,"FR prompt, EN targets",68.18181818181817,52.27272727272727,84.0909090909091,1.0
+fr-multilingual,j,wikitext,"FR prompt, FR targets",59.09090909090909,52.27272727272727,65.9090909090909,1.0
+fr-multilingual,j,en,"FR prompt, EN targets",80.68181818181819,69.31818181818181,92.04545454545453,1.0
+fr-multilingual,j,en,"FR prompt, FR targets",56.81818181818182,47.72727272727273,65.9090909090909,1.0
+fr-multilingual,j,fr,"FR prompt, EN targets",52.27272727272727,36.36363636363637,65.9090909090909,1.0
+fr-multilingual,j,fr,"FR prompt, FR targets",59.09090909090909,52.27272727272727,65.9090909090909,1.0
+fr-multilingual,r,wikitext,"FR prompt, EN targets",89.77272727272728,79.54545454545455,97.72727272727273,1.0
+fr-multilingual,r,wikitext,"FR prompt, FR targets",54.54545454545454,50.0,61.36363636363637,1.0
+fr-multilingual,r,en,"FR prompt, EN targets",75.0,67.04545454545453,84.0909090909091,1.0
+fr-multilingual,r,en,"FR prompt, FR targets",50.0,40.909090909090914,59.09090909090909,1.0
+fr-multilingual,r,fr,"FR prompt, EN targets",60.227272727272734,50.0,69.31818181818181,1.0
+fr-multilingual,r,fr,"FR prompt, FR targets",62.5,54.54545454545454,70.45454545454545,1.0
+fr-multilingual,jpp,wikitext,"FR prompt, EN targets",88.63636363636364,77.27272727272727,97.72727272727273,1.0
+fr-multilingual,jpp,wikitext,"FR prompt, FR targets",68.18181818181819,59.09090909090909,77.27272727272728,1.0
+fr-multilingual,jpp,en,"FR prompt, EN targets",94.31818181818181,86.36363636363637,100.0,1.0
+fr-multilingual,jpp,en,"FR prompt, FR targets",73.86363636363637,63.63636363636363,84.0909090909091,1.0
+fr-multilingual,jpp,fr,"FR prompt, EN targets",80.68181818181819,71.5909090909091,89.77272727272728,1.0
+fr-multilingual,jpp,fr,"FR prompt, FR targets",82.95454545454547,75.0,90.9090909090909,1.0
+fr-multilingual,jpp_wen,wikitext,"FR prompt, EN targets",90.9090909090909,79.54545454545455,100.0,1.0
+fr-multilingual,jpp_wen,wikitext,"FR prompt, FR targets",65.9090909090909,54.54545454545454,77.27272727272727,1.0
+fr-multilingual,jpp_wen,en,"FR prompt, EN targets",92.04545454545453,84.0909090909091,98.86363636363637,1.0
+fr-multilingual,jpp_wen,en,"FR prompt, FR targets",71.5909090909091,59.09090909090909,82.95454545454547,1.0
+fr-multilingual,jpp_wen,fr,"FR prompt, EN targets",69.31818181818181,59.090909090909086,78.4090909090909,1.0
+fr-multilingual,jpp_wen,fr,"FR prompt, FR targets",62.5,54.54545454545454,71.5909090909091,1.0
+fr-multilingual,jpp_wfr,wikitext,"FR prompt, EN targets",94.31818181818181,88.63636363636363,100.0,1.0
+fr-multilingual,jpp_wfr,wikitext,"FR prompt, FR targets",45.45454545454545,35.227272727272734,55.68181818181818,1.0
+fr-multilingual,jpp_wfr,en,"FR prompt, EN targets",78.4090909090909,70.45454545454545,85.22727272727273,1.0
+fr-multilingual,jpp_wfr,en,"FR prompt, FR targets",47.72727272727273,44.31818181818181,50.0,1.0
+fr-multilingual,jpp_wfr,fr,"FR prompt, EN targets",63.63636363636364,51.13636363636364,75.0,1.0
+fr-multilingual,jpp_wfr,fr,"FR prompt, FR targets",89.77272727272728,82.95454545454545,96.5909090909091,1.0
+fr-multilingual,jpp_matched,wikitext,"FR prompt, EN targets",90.9090909090909,79.54545454545455,100.0,1.0
+fr-multilingual,jpp_matched,wikitext,"FR prompt, FR targets",65.9090909090909,54.54545454545454,77.27272727272727,1.0
+fr-multilingual,jpp_matched,en,"FR prompt, EN targets",92.04545454545453,84.0909090909091,98.86363636363637,1.0
+fr-multilingual,jpp_matched,en,"FR prompt, FR targets",71.5909090909091,59.09090909090909,82.95454545454547,1.0
+fr-multilingual,jpp_matched,fr,"FR prompt, EN targets",63.63636363636364,51.13636363636364,75.0,1.0
+fr-multilingual,jpp_matched,fr,"FR prompt, FR targets",89.77272727272728,82.95454545454545,96.5909090909091,1.0
+"fr-multilingual, language name",logit,none,"FR prompt, EN targets",0.0,0.0,0.0,0.0
+"fr-multilingual, language name",logit,none,"FR prompt, FR targets",0.0,0.0,0.0,0.0
+"fr-multilingual, language name",j,wikitext,"FR prompt, EN targets",36.36363636363637,9.090909090909092,63.63636363636363,0.9936
+"fr-multilingual, language name",j,wikitext,"FR prompt, FR targets",0.0,0.0,0.0,0.0
+"fr-multilingual, language name",j,en,"FR prompt, EN targets",59.090909090909086,31.81818181818182,86.36363636363637,1.0
+"fr-multilingual, language name",j,en,"FR prompt, FR targets",0.0,0.0,0.0,0.0
+"fr-multilingual, language name",j,fr,"FR prompt, EN targets",0.0,0.0,0.0,0.0
+"fr-multilingual, language name",j,fr,"FR prompt, FR targets",0.0,0.0,0.0,0.0
+"fr-multilingual, language name",r,wikitext,"FR prompt, EN targets",100.0,100.0,100.0,1.0
+"fr-multilingual, language name",r,wikitext,"FR prompt, FR targets",0.0,0.0,0.0,0.0
+"fr-multilingual, language name",r,en,"FR prompt, EN targets",40.90909090909091,13.636363636363637,68.18181818181819,0.9986
+"fr-multilingual, language name",r,en,"FR prompt, FR targets",0.0,0.0,0.0,0.0
+"fr-multilingual, language name",r,fr,"FR prompt, EN targets",0.0,0.0,0.0,0.0
+"fr-multilingual, language name",r,fr,"FR prompt, FR targets",4.545454545454546,0.0,13.636363636363635,0.6548
+"fr-multilingual, language name",jpp,wikitext,"FR prompt, EN targets",100.0,100.0,100.0,1.0
+"fr-multilingual, language name",jpp,wikitext,"FR prompt, FR targets",54.54545454545455,31.81818181818182,77.27272727272727,1.0
+"fr-multilingual, language name",jpp,en,"FR prompt, EN targets",100.0,100.0,100.0,1.0
+"fr-multilingual, language name",jpp,en,"FR prompt, FR targets",63.63636363636364,36.36363636363637,86.36363636363637,1.0
+"fr-multilingual, language name",jpp,fr,"FR prompt, EN targets",77.27272727272728,50.0,100.0,1.0
+"fr-multilingual, language name",jpp,fr,"FR prompt, FR targets",72.72727272727273,50.0,95.45454545454545,1.0
+"fr-multilingual, language name",jpp_wen,wikitext,"FR prompt, EN targets",100.0,100.0,100.0,1.0
+"fr-multilingual, language name",jpp_wen,wikitext,"FR prompt, FR targets",63.63636363636363,36.36363636363637,90.9090909090909,1.0
+"fr-multilingual, language name",jpp_wen,en,"FR prompt, EN targets",95.45454545454545,86.36363636363637,100.0,1.0
+"fr-multilingual, language name",jpp_wen,en,"FR prompt, FR targets",68.18181818181819,40.90909090909091,90.9090909090909,1.0
+"fr-multilingual, language name",jpp_wen,fr,"FR prompt, EN targets",36.36363636363637,22.727272727272727,50.0,1.0
+"fr-multilingual, language name",jpp_wen,fr,"FR prompt, FR targets",4.545454545454546,0.0,13.636363636363635,0.6368
+"fr-multilingual, language name",jpp_wfr,wikitext,"FR prompt, EN targets",100.0,100.0,100.0,1.0
+"fr-multilingual, language name",jpp_wfr,wikitext,"FR prompt, FR targets",13.636363636363635,0.0,27.27272727272727,0.9722
+"fr-multilingual, language name",jpp_wfr,en,"FR prompt, EN targets",54.54545454545455,36.36363636363636,72.72727272727272,1.0
+"fr-multilingual, language name",jpp_wfr,en,"FR prompt, FR targets",0.0,0.0,0.0,0.0
+"fr-multilingual, language name",jpp_wfr,fr,"FR prompt, EN targets",13.636363636363635,0.0,27.27272727272727,0.9704
+"fr-multilingual, language name",jpp_wfr,fr,"FR prompt, FR targets",100.0,100.0,100.0,1.0
+"fr-multilingual, language name",jpp_matched,wikitext,"FR prompt, EN targets",100.0,100.0,100.0,1.0
+"fr-multilingual, language name",jpp_matched,wikitext,"FR prompt, FR targets",63.63636363636363,36.36363636363637,90.9090909090909,1.0
+"fr-multilingual, language name",jpp_matched,en,"FR prompt, EN targets",95.45454545454545,86.36363636363637,100.0,1.0
+"fr-multilingual, language name",jpp_matched,en,"FR prompt, FR targets",68.18181818181819,40.90909090909091,90.9090909090909,1.0
+"fr-multilingual, language name",jpp_matched,fr,"FR prompt, EN targets",13.636363636363635,0.0,27.27272727272727,0.9704
+"fr-multilingual, language name",jpp_matched,fr,"FR prompt, FR targets",100.0,100.0,100.0,1.0
+"fr-multilingual, category",logit,none,"FR prompt, EN targets",60.0,30.0,90.0,1.0
+"fr-multilingual, category",logit,none,"FR prompt, FR targets",0.0,0.0,0.0,0.0
+"fr-multilingual, category",j,wikitext,"FR prompt, EN targets",70.0,40.0,100.0,1.0
+"fr-multilingual, category",j,wikitext,"FR prompt, FR targets",50.0,20.0,80.0,0.9992
+"fr-multilingual, category",j,en,"FR prompt, EN targets",80.0,50.0,100.0,1.0
+"fr-multilingual, category",j,en,"FR prompt, FR targets",40.0,10.0,70.0,0.9946
+"fr-multilingual, category",j,fr,"FR prompt, EN targets",60.0,30.0,90.0,1.0
+"fr-multilingual, category",j,fr,"FR prompt, FR targets",40.0,10.0,70.0,0.9946
+"fr-multilingual, category",r,wikitext,"FR prompt, EN targets",80.0,50.0,100.0,1.0
+"fr-multilingual, category",r,wikitext,"FR prompt, FR targets",40.0,10.0,70.0,0.9958
+"fr-multilingual, category",r,en,"FR prompt, EN targets",80.0,50.0,100.0,1.0
+"fr-multilingual, category",r,en,"FR prompt, FR targets",20.0,0.0,50.0,0.8916
+"fr-multilingual, category",r,fr,"FR prompt, EN targets",80.0,50.0,100.0,1.0
+"fr-multilingual, category",r,fr,"FR prompt, FR targets",50.0,20.0,80.0,0.9992
+"fr-multilingual, category",jpp,wikitext,"FR prompt, EN targets",80.0,50.0,100.0,1.0
+"fr-multilingual, category",jpp,wikitext,"FR prompt, FR targets",25.0,0.0,50.0,0.9682
+"fr-multilingual, category",jpp,en,"FR prompt, EN targets",85.0,70.0,100.0,1.0
+"fr-multilingual, category",jpp,en,"FR prompt, FR targets",35.0,10.0,65.0,0.9946
+"fr-multilingual, category",jpp,fr,"FR prompt, EN targets",70.0,45.0,95.0,1.0
+"fr-multilingual, category",jpp,fr,"FR prompt, FR targets",55.0,25.0,85.0,0.9998
+"fr-multilingual, category",jpp_wen,wikitext,"FR prompt, EN targets",80.0,50.0,100.0,1.0
+"fr-multilingual, category",jpp_wen,wikitext,"FR prompt, FR targets",0.0,0.0,0.0,0.0
+"fr-multilingual, category",jpp_wen,en,"FR prompt, EN targets",85.0,65.0,100.0,1.0
+"fr-multilingual, category",jpp_wen,en,"FR prompt, FR targets",25.0,0.0,50.0,0.9704
+"fr-multilingual, category",jpp_wen,fr,"FR prompt, EN targets",70.0,40.0,100.0,1.0
+"fr-multilingual, category",jpp_wen,fr,"FR prompt, FR targets",50.0,20.0,80.0,0.9992
+"fr-multilingual, category",jpp_wfr,wikitext,"FR prompt, EN targets",80.0,50.0,100.0,1.0
+"fr-multilingual, category",jpp_wfr,wikitext,"FR prompt, FR targets",15.0,5.0,30.0,0.9756
+"fr-multilingual, category",jpp_wfr,en,"FR prompt, EN targets",75.0,50.0,100.0,1.0
+"fr-multilingual, category",jpp_wfr,en,"FR prompt, FR targets",0.0,0.0,0.0,0.0
+"fr-multilingual, category",jpp_wfr,fr,"FR prompt, EN targets",75.0,50.0,100.0,1.0
+"fr-multilingual, category",jpp_wfr,fr,"FR prompt, FR targets",55.0,25.0,85.0,1.0
+"fr-multilingual, category",jpp_matched,wikitext,"FR prompt, EN targets",80.0,50.0,100.0,1.0
+"fr-multilingual, category",jpp_matched,wikitext,"FR prompt, FR targets",0.0,0.0,0.0,0.0
+"fr-multilingual, category",jpp_matched,en,"FR prompt, EN targets",85.0,65.0,100.0,1.0
+"fr-multilingual, category",jpp_matched,en,"FR prompt, FR targets",25.0,0.0,50.0,0.9704
+"fr-multilingual, category",jpp_matched,fr,"FR prompt, EN targets",75.0,50.0,100.0,1.0
+"fr-multilingual, category",jpp_matched,fr,"FR prompt, FR targets",55.0,25.0,85.0,1.0
+"fr-multilingual, operand",logit,none,"FR prompt, EN targets",72.72727272727273,45.45454545454545,100.0,1.0
+"fr-multilingual, operand",logit,none,"FR prompt, FR targets",54.54545454545454,27.27272727272727,81.81818181818183,0.9998
+"fr-multilingual, operand",j,wikitext,"FR prompt, EN targets",72.72727272727273,45.45454545454545,100.0,1.0
+"fr-multilingual, operand",j,wikitext,"FR prompt, FR targets",90.9090909090909,72.72727272727273,100.0,1.0
+"fr-multilingual, operand",j,en,"FR prompt, EN targets",81.81818181818183,54.54545454545454,100.0,1.0
+"fr-multilingual, operand",j,en,"FR prompt, FR targets",90.9090909090909,72.72727272727273,100.0,1.0
+"fr-multilingual, operand",j,fr,"FR prompt, EN targets",63.63636363636363,36.36363636363637,90.9090909090909,1.0
+"fr-multilingual, operand",j,fr,"FR prompt, FR targets",100.0,100.0,100.0,1.0
+"fr-multilingual, operand",r,wikitext,"FR prompt, EN targets",77.27272727272728,54.54545454545454,100.0,1.0
+"fr-multilingual, operand",r,wikitext,"FR prompt, FR targets",81.81818181818183,54.54545454545454,100.0,1.0
+"fr-multilingual, operand",r,en,"FR prompt, EN targets",77.27272727272728,54.54545454545454,100.0,1.0
+"fr-multilingual, operand",r,en,"FR prompt, FR targets",81.81818181818183,54.54545454545454,100.0,1.0
+"fr-multilingual, operand",r,fr,"FR prompt, EN targets",68.18181818181819,40.90909090909091,90.9090909090909,1.0
+"fr-multilingual, operand",r,fr,"FR prompt, FR targets",100.0,100.0,100.0,1.0
+"fr-multilingual, operand",jpp,wikitext,"FR prompt, EN targets",72.72727272727273,45.45454545454545,100.0,1.0
+"fr-multilingual, operand",jpp,wikitext,"FR prompt, FR targets",90.9090909090909,77.27272727272728,100.0,1.0
+"fr-multilingual, operand",jpp,en,"FR prompt, EN targets",90.9090909090909,72.72727272727273,100.0,1.0
+"fr-multilingual, operand",jpp,en,"FR prompt, FR targets",90.9090909090909,72.72727272727273,100.0,1.0
+"fr-multilingual, operand",jpp,fr,"FR prompt, EN targets",72.72727272727273,45.45454545454545,100.0,1.0
+"fr-multilingual, operand",jpp,fr,"FR prompt, FR targets",100.0,100.0,100.0,1.0
+"fr-multilingual, operand",jpp_wen,wikitext,"FR prompt, EN targets",81.81818181818183,54.54545454545454,100.0,1.0
+"fr-multilingual, operand",jpp_wen,wikitext,"FR prompt, FR targets",90.9090909090909,72.72727272727273,100.0,1.0
+"fr-multilingual, operand",jpp_wen,en,"FR prompt, EN targets",86.36363636363637,68.18181818181819,100.0,1.0
+"fr-multilingual, operand",jpp_wen,en,"FR prompt, FR targets",86.36363636363637,68.18181818181819,100.0,1.0
+"fr-multilingual, operand",jpp_wen,fr,"FR prompt, EN targets",72.72727272727273,45.45454545454545,100.0,1.0
+"fr-multilingual, operand",jpp_wen,fr,"FR prompt, FR targets",100.0,100.0,100.0,1.0
+"fr-multilingual, operand",jpp_wfr,wikitext,"FR prompt, EN targets",95.45454545454545,86.36363636363637,100.0,1.0
+"fr-multilingual, operand",jpp_wfr,wikitext,"FR prompt, FR targets",59.090909090909086,36.36363636363637,81.81818181818181,1.0
+"fr-multilingual, operand",jpp_wfr,en,"FR prompt, EN targets",86.36363636363637,68.18181818181819,100.0,1.0
+"fr-multilingual, operand",jpp_wfr,en,"FR prompt, FR targets",90.9090909090909,77.27272727272728,100.0,1.0
+"fr-multilingual, operand",jpp_wfr,fr,"FR prompt, EN targets",68.18181818181819,40.90909090909091,90.9090909090909,1.0
+"fr-multilingual, operand",jpp_wfr,fr,"FR prompt, FR targets",100.0,100.0,100.0,1.0
+"fr-multilingual, operand",jpp_matched,wikitext,"FR prompt, EN targets",81.81818181818183,54.54545454545454,100.0,1.0
+"fr-multilingual, operand",jpp_matched,wikitext,"FR prompt, FR targets",90.9090909090909,72.72727272727273,100.0,1.0
+"fr-multilingual, operand",jpp_matched,en,"FR prompt, EN targets",86.36363636363637,68.18181818181819,100.0,1.0
+"fr-multilingual, operand",jpp_matched,en,"FR prompt, FR targets",86.36363636363637,68.18181818181819,100.0,1.0
+"fr-multilingual, operand",jpp_matched,fr,"FR prompt, EN targets",68.18181818181819,40.90909090909091,90.9090909090909,1.0
+"fr-multilingual, operand",jpp_matched,fr,"FR prompt, FR targets",100.0,100.0,100.0,1.0
+"fr-multilingual, answer",logit,none,"FR prompt, EN targets",90.0,70.0,100.0,1.0
+"fr-multilingual, answer",logit,none,"FR prompt, FR targets",100.0,100.0,100.0,1.0
+"fr-multilingual, answer",j,wikitext,"FR prompt, EN targets",100.0,100.0,100.0,1.0
+"fr-multilingual, answer",j,wikitext,"FR prompt, FR targets",100.0,100.0,100.0,1.0
+"fr-multilingual, answer",j,en,"FR prompt, EN targets",100.0,100.0,100.0,1.0
+"fr-multilingual, answer",j,en,"FR prompt, FR targets",100.0,100.0,100.0,1.0
+"fr-multilingual, answer",j,fr,"FR prompt, EN targets",90.0,70.0,100.0,1.0
+"fr-multilingual, answer",j,fr,"FR prompt, FR targets",100.0,100.0,100.0,1.0
+"fr-multilingual, answer",r,wikitext,"FR prompt, EN targets",100.0,100.0,100.0,1.0
+"fr-multilingual, answer",r,wikitext,"FR prompt, FR targets",100.0,100.0,100.0,1.0
+"fr-multilingual, answer",r,en,"FR prompt, EN targets",100.0,100.0,100.0,1.0
+"fr-multilingual, answer",r,en,"FR prompt, FR targets",100.0,100.0,100.0,1.0
+"fr-multilingual, answer",r,fr,"FR prompt, EN targets",100.0,100.0,100.0,1.0
+"fr-multilingual, answer",r,fr,"FR prompt, FR targets",100.0,100.0,100.0,1.0
+"fr-multilingual, answer",jpp,wikitext,"FR prompt, EN targets",100.0,100.0,100.0,1.0
+"fr-multilingual, answer",jpp,wikitext,"FR prompt, FR targets",100.0,100.0,100.0,1.0
+"fr-multilingual, answer",jpp,en,"FR prompt, EN targets",100.0,100.0,100.0,1.0
+"fr-multilingual, answer",jpp,en,"FR prompt, FR targets",100.0,100.0,100.0,1.0
+"fr-multilingual, answer",jpp,fr,"FR prompt, EN targets",100.0,100.0,100.0,1.0
+"fr-multilingual, answer",jpp,fr,"FR prompt, FR targets",100.0,100.0,100.0,1.0
+"fr-multilingual, answer",jpp_wen,wikitext,"FR prompt, EN targets",100.0,100.0,100.0,1.0
+"fr-multilingual, answer",jpp_wen,wikitext,"FR prompt, FR targets",100.0,100.0,100.0,1.0
+"fr-multilingual, answer",jpp_wen,en,"FR prompt, EN targets",100.0,100.0,100.0,1.0
+"fr-multilingual, answer",jpp_wen,en,"FR prompt, FR targets",100.0,100.0,100.0,1.0
+"fr-multilingual, answer",jpp_wen,fr,"FR prompt, EN targets",100.0,100.0,100.0,1.0
+"fr-multilingual, answer",jpp_wen,fr,"FR prompt, FR targets",100.0,100.0,100.0,1.0
+"fr-multilingual, answer",jpp_wfr,wikitext,"FR prompt, EN targets",100.0,100.0,100.0,1.0
+"fr-multilingual, answer",jpp_wfr,wikitext,"FR prompt, FR targets",100.0,100.0,100.0,1.0
+"fr-multilingual, answer",jpp_wfr,en,"FR prompt, EN targets",100.0,100.0,100.0,1.0
+"fr-multilingual, answer",jpp_wfr,en,"FR prompt, FR targets",100.0,100.0,100.0,1.0
+"fr-multilingual, answer",jpp_wfr,fr,"FR prompt, EN targets",100.0,100.0,100.0,1.0
+"fr-multilingual, answer",jpp_wfr,fr,"FR prompt, FR targets",100.0,100.0,100.0,1.0
+"fr-multilingual, answer",jpp_matched,wikitext,"FR prompt, EN targets",100.0,100.0,100.0,1.0
+"fr-multilingual, answer",jpp_matched,wikitext,"FR prompt, FR targets",100.0,100.0,100.0,1.0
+"fr-multilingual, answer",jpp_matched,en,"FR prompt, EN targets",100.0,100.0,100.0,1.0
+"fr-multilingual, answer",jpp_matched,en,"FR prompt, FR targets",100.0,100.0,100.0,1.0
+"fr-multilingual, answer",jpp_matched,fr,"FR prompt, EN targets",100.0,100.0,100.0,1.0
+"fr-multilingual, answer",jpp_matched,fr,"FR prompt, FR targets",100.0,100.0,100.0,1.0

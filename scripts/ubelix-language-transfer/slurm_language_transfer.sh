@@ -14,9 +14,9 @@
 
 # Language-transfer evaluation on the lenses slurm_fit_lenses.sh already fitted. No lens is refitted;
 # only the J++ expert weights are fitted again, on English and on French labels.
-# Submit from the repo root, with the helper files in scripts/ubelix/:
-#   sbatch scripts/ubelix/slurm_language_transfer.sh                 all stages, in order
-#   STAGE="score analyze" sbatch scripts/ubelix/slurm_language_transfer.sh
+# Submit from the repo root, with the helper files in scripts/ubelix-language-transfer/:
+#   sbatch scripts/ubelix-language-transfer/slurm_language_transfer.sh                 all stages, in order
+#   STAGE="score analyze" sbatch scripts/ubelix-language-transfer/slurm_language_transfer.sh
 # Stages (each skips finished work, so a requeue or a resubmission is safe):
 #   prepare   the bilingual benchmark and its fitting/held-out split   -> $ROOT/lang/items.json, weights_{en,fr}/
 #   grade     the model's own answers in each prompt language          -> $ROOT/lang/correctness_{en,fr}.csv
@@ -37,8 +37,8 @@ SCRATCH_DIR="/storage/scratch/users/$USER"
 SIF="${SIF:-$SCRATCH_DIR/jlens_paper.sif}"
 export HF_HOME="$SCRATCH_DIR/.cache/huggingface"
 ROOT="${ROOT:-$SCRATCH_DIR/jlens_paper/9b}"
-JPP="jlens_jpp_reproduction/jpp_lens"
-HELPERS="/work/scripts/ubelix"
+JPP="${JPP:-jlens_jpp_reproduction/jpp_lens}"
+HELPERS="${HELPERS:-/work/scripts/ubelix-language-transfer}"
 LANG_DIR="$ROOT/lang"
 
 echo "Node: $(hostname)  Date: $(date)  Stages: $STAGE  Restarts: ${SLURM_RESTART_COUNT:-0}"
@@ -108,6 +108,9 @@ score)
 analyze)
     run "$HELPERS/analyze_language_transfer.py" --ranks "$LANG_DIR/ranks.csv" --lang "$LANG_DIR" \
         --out "$LANG_DIR/analysis"
+    # recall@100 does not saturate on French targets the way recall@10 does
+    run "$HELPERS/analyze_language_transfer.py" --ranks "$LANG_DIR/ranks.csv" --lang "$LANG_DIR" \
+        --out "$LANG_DIR/analysis_k100" --k 100
     ;;
 *)
     echo "Unknown stage $stage"; exit 1
