@@ -10,6 +10,9 @@
 
 A **residual** (the **residual stream**) is the vector a transformer keeps for each token position, which every layer reads from and adds to.
 
+Example: token/word "Elefant"; at each layer the residual stream keeps getting more info / context added into it to better 
+describe the token/word in its current context.
+
 - **Start:** the token's embedding, a vector of size `d_model` (e.g. 4096).
 - **Each layer** (attention, then MLP) reads that vector, computes an update, and adds it back:
 
