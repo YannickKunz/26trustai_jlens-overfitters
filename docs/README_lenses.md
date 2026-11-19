@@ -1,5 +1,7 @@
 # Trained lenses: Qwen3.6-27B and Qwen3.5-9B
 
+Download (Google Drive, view only): https://drive.google.com/drive/folders/1tplAOFWpquRA9qhkYCRSIDD6WsLmG741?usp=sharing
+
 Fitted on UBELIX with the J++ paper's pipeline (`jpp_cli.py`, jpp_lens commit `d7efc0de`), in its locked environment (torch 2.11.0, transformers 5.14.1).
 
 ## Folders
@@ -11,6 +13,7 @@ Fitted on UBELIX with the J++ paper's pipeline (`jpp_cli.py`, jpp_lens commit `d
 | `j.pt` | J-Lens: standard gradients, one pooled Jacobian per layer |
 | `r.pt` | R-Lens: LRP backward pass, one pooled Jacobian per layer |
 | `jpp.pt` | J++ Lens: same LRP fit as R, 8 experts per layer combined with learned weights |
+| `jpp_wen.pt`, `jpp_wfr.pt` | The same J++ experts, with expert weights refitted on the bilingual benchmark: English items (`wen`) or French items (`wfr`). Only for the 1,000-prompt 9B lenses and the 64-prompt 27B lenses. "Matched weights" in the paper: `jpp_wen` for WikiText and English Wikipedia, `jpp_wfr` for French Wikipedia |
 
 R and J++ come from the same fit, so they are not independent.
 

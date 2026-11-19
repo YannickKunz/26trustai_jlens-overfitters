@@ -1,805 +1,1047 @@
 {
- "_comment": "French side of the bilingual benchmark. English prompts, targets and intermediates are read from the upstream jpp_lens data by (eval, name). fr_prompt null + fr_upstream_item: reuse the prompt of that upstream French item. Translations were machine-drafted: have a French speaker proofread before the final run.",
- "parallel": [
-  {
-   "eval": "multihop",
-   "name": "carnival-ocean",
-   "fr_prompt": "Fait : L'océan qui borde le pays où le carnaval est le plus célèbre est l'océan ",
-   "fr_target": "Atlantique",
-   "fr_intermediates": [
-    "Brésil"
-   ]
-  },
-  {
-   "eval": "multihop",
-   "name": "amazon-language",
-   "fr_prompt": "Fait : La langue parlée dans le pays où se termine le fleuve Amazone est le ",
-   "fr_target": "portugais",
-   "fr_intermediates": [
-    "Brésil"
-   ]
-  },
-  {
-   "eval": "multihop",
-   "name": "spider-legs",
-   "fr_prompt": "Fait : Le nombre de pattes de l'animal qui tisse des toiles est ",
-   "fr_target": "8",
-   "fr_intermediates": [
-    "araignée"
-   ]
-  },
-  {
-   "eval": "multihop",
-   "name": "paper-continent",
-   "fr_prompt": "Fait : Le continent où se trouve le pays qui a inventé le papier est l'",
-   "fr_target": "Asie",
-   "fr_intermediates": [
-    "Chine"
-   ]
-  },
-  {
-   "eval": "multihop",
-   "name": "christmas-season",
-   "fr_prompt": "Fait : La saison pendant laquelle a lieu la fête au sapin décoré est l'",
-   "fr_target": "hiver",
-   "fr_intermediates": [
-    "Noël"
-   ]
-  },
-  {
-   "eval": "multihop",
-   "name": "atomic-26-symbol",
-   "fr_prompt": "Fait : Le symbole chimique de l'élément de numéro atomique 26 est ",
-   "fr_target": "Fe",
-   "fr_intermediates": [
-    "fer"
-   ]
-  },
-  {
-   "eval": "multihop",
-   "name": "atomic-29-symbol",
-   "fr_prompt": "Fait : Le symbole chimique de l'élément de numéro atomique 29 est ",
-   "fr_target": "Cu",
-   "fr_intermediates": [
-    "cuivre"
-   ]
-  },
-  {
-   "eval": "multihop",
-   "name": "atomic-80-state",
-   "fr_prompt": "Fait : À température ambiante, l'état de la matière de l'élément de numéro atomique 80 est ",
-   "fr_target": "liquide",
-   "fr_intermediates": [
-    "mercure"
-   ]
-  },
-  {
-   "eval": "multihop",
-   "name": "atomic-29-flame",
-   "fr_prompt": "Fait : La couleur de flamme produite en brûlant l'élément de numéro atomique 29 est le ",
-   "fr_target": "vert",
-   "fr_intermediates": [
-    "cuivre"
-   ]
-  },
-  {
-   "eval": "multihop",
-   "name": "planet-3-moons",
-   "fr_prompt": "Fait : Le nombre de lunes naturelles en orbite autour de la troisième planète à partir du Soleil est ",
-   "fr_target": "1",
-   "fr_intermediates": [
-    "Terre"
-   ]
-  },
-  {
-   "eval": "multihop",
-   "name": "etym-saturn-position",
-   "fr_prompt": "Fait : La planète nommée d'après le dieu romain de l'agriculture et du temps est la planète numéro ",
-   "fr_target": "6",
-   "fr_intermediates": [
-    "Saturne"
-   ]
-  },
-  {
-   "eval": "multihop",
-   "name": "chem-photosynthesis-Z",
-   "fr_prompt": "Fait : Le numéro atomique du gaz que les plantes libèrent pendant la photosynthèse est ",
-   "fr_target": "8",
-   "fr_intermediates": [
-    "oxygène"
-   ]
-  },
-  {
-   "eval": "multihop",
-   "name": "chem-atmosphere-Z",
-   "fr_prompt": "Fait : Le numéro atomique du gaz qui constitue environ 78 pour cent de l'atmosphère est ",
-   "fr_target": "7",
-   "fr_intermediates": [
-    "azote"
-   ]
-  },
-  {
-   "eval": "multihop",
-   "name": "chem-organic-Z",
-   "fr_prompt": "Fait : Le numéro atomique de l'élément présent par définition dans tous les composés organiques est ",
-   "fr_target": "6",
-   "fr_intermediates": [
-    "carbone"
-   ]
-  },
-  {
-   "eval": "multihop",
-   "name": "func-pumps-chambers",
-   "fr_prompt": "Fait : Chez l'être humain, l'organe qui pompe le sang dans le corps possède ce nombre de cavités : ",
-   "fr_target": "4",
-   "fr_intermediates": [
-    "cœur"
-   ]
-  },
-  {
-   "eval": "multihop",
-   "name": "func-filters-count",
-   "fr_prompt": "Fait : Chez l'être humain, le nombre d'organes qui filtrent le sang pour produire l'urine est ",
-   "fr_target": "2",
-   "fr_intermediates": [
-    "rein"
-   ]
-  },
-  {
-   "eval": "multihop",
-   "name": "super-largest-country-capital",
-   "fr_prompt": "Fait : La capitale du plus grand pays du monde par sa superficie est ",
-   "fr_target": "Moscou",
-   "fr_intermediates": [
-    "Russie"
-   ]
-  },
-  {
-   "eval": "multihop",
-   "name": "super-populous-capital",
-   "fr_prompt": "Fait : La capitale du pays le plus peuplé du monde est ",
-   "fr_target": "Pékin",
-   "fr_intermediates": [
-    "Chine"
-   ]
-  },
-  {
-   "eval": "multihop",
-   "name": "super-largest-island-nation",
-   "fr_prompt": "Fait : Le pays qui est le plus grand État insulaire par sa superficie a pour capitale ",
-   "fr_target": "Jakarta",
-   "fr_intermediates": [
-    "Indonésie"
-   ]
-  },
-  {
-   "eval": "multihop",
-   "name": "colosseum-currency",
-   "fr_prompt": "Fait : La monnaie utilisée dans le pays où se dresse le Colisée est l'",
-   "fr_target": "euro",
-   "fr_intermediates": [
-    "Italie"
-   ]
-  },
-  {
-   "eval": "multihop",
-   "name": "greatwall-ocean",
-   "fr_prompt": "Fait : L'océan situé à l'est du pays qui a construit la Grande Muraille est l'océan ",
-   "fr_target": "Pacifique",
-   "fr_intermediates": [
-    "Chine"
-   ]
-  },
-  {
-   "eval": "multihop",
-   "name": "holiday-independence-monthnum",
-   "fr_prompt": "Fait : La fête de l'indépendance des États-Unis est célébrée au mois numéro ",
-   "fr_target": "7",
-   "fr_intermediates": [
-    "juillet"
-   ]
-  },
-  {
-   "eval": "multihop",
-   "name": "holiday-christmas-monthnum",
-   "fr_prompt": "Fait : Le jour de Noël est célébré au mois numéro ",
-   "fr_target": "12",
-   "fr_intermediates": [
-    "décembre"
-   ]
-  },
-  {
-   "eval": "multihop",
-   "name": "holiday-halloween-monthnum",
-   "fr_prompt": "Fait : Halloween est célébré au mois numéro ",
-   "fr_target": "10",
-   "fr_intermediates": [
-    "octobre"
-   ]
-  },
-  {
-   "eval": "multihop",
-   "name": "holiday-valentines-monthnum",
-   "fr_prompt": "Fait : La Saint-Valentin est célébrée au mois numéro ",
-   "fr_target": "2",
-   "fr_intermediates": [
-    "février"
-   ]
-  },
-  {
-   "eval": "multihop",
-   "name": "etym-janus-monthnum",
-   "fr_prompt": "Fait : Le mois nommé d'après le dieu romain à deux visages, gardien des portes, est le mois numéro ",
-   "fr_target": "1",
-   "fr_intermediates": [
-    "janvier"
-   ]
-  },
-  {
-   "eval": "multihop",
-   "name": "month-7-namedafter",
-   "fr_prompt": "Fait : Le septième mois de l'année porte le nom du chef romain Jules ",
-   "fr_target": "César",
-   "fr_intermediates": [
-    "juillet"
-   ]
-  },
-  {
-   "eval": "multihop",
-   "name": "etym-caesar-monthnum",
-   "fr_prompt": "Fait : Le mois nommé d'après Jules César est le mois numéro ",
-   "fr_target": "7",
-   "fr_intermediates": [
-    "juillet"
-   ]
-  },
-  {
-   "eval": "multihop",
-   "name": "inv-balloon-opposite",
-   "fr_prompt": "Fait : La direction opposée à celle vers laquelle s'élève un ballon d'hélium est le \"",
-   "fr_target": "bas",
-   "fr_intermediates": [
-    "haut"
-   ]
-  },
-  {
-   "eval": "multihop",
-   "name": "inv-roots-opposite",
-   "fr_prompt": "Fait : La direction opposée à celle dans laquelle poussent les racines d'un arbre est le \"",
-   "fr_target": "haut",
-   "fr_intermediates": [
-    "bas"
-   ]
-  },
-  {
-   "eval": "multihop",
-   "name": "inv-antarctica-opposite",
-   "fr_prompt": "Fait : Le point cardinal opposé à celui où se trouve l'Antarctique par rapport à l'équateur est le ",
-   "fr_target": "nord",
-   "fr_intermediates": [
-    "sud"
-   ]
-  },
-  {
-   "eval": "multihop",
-   "name": "tajmahal-continent",
-   "fr_prompt": "Fait : Le continent où se trouve le pays qui a construit le Taj Mahal est l'",
-   "fr_target": "Asie",
-   "fr_intermediates": [
-    "Inde"
-   ]
-  },
-  {
-   "eval": "multihop",
-   "name": "succ-halloween-nextmonth",
-   "fr_prompt": "Fait : Le mois qui suit immédiatement celui d'Halloween est ",
-   "fr_target": "novembre",
-   "fr_intermediates": [
-    "octobre"
-   ]
-  },
-  {
-   "eval": "multihop",
-   "name": "pred-valentines-prevmonth",
-   "fr_prompt": "Fait : Le mois qui précède immédiatement celui de la Saint-Valentin est \"",
-   "fr_target": "janvier",
-   "fr_intermediates": [
-    "février"
-   ]
-  },
-  {
-   "eval": "multihop",
-   "name": "dual-stars-visible-opposite",
-   "fr_prompt": "Fait : Le contraire du moment de la journée où les étoiles sont visibles est le \"",
-   "fr_target": "jour",
-   "fr_intermediates": [
-    "nuit"
-   ]
-  },
-  {
-   "eval": "multihop",
-   "name": "dual-photosynthesis-opposite",
-   "fr_prompt": "Fait : Le contraire du moment de la journée où les plantes font la photosynthèse est la \"",
-   "fr_target": "nuit",
-   "fr_intermediates": [
-    "jour"
-   ]
-  },
-  {
-   "eval": "multihop",
-   "name": "dbl-armistice-antonym",
-   "fr_prompt": "Fait : L'antonyme de ce à quoi un armistice met fin est \"",
-   "fr_target": "paix",
-   "fr_intermediates": [
-    "guerre"
-   ]
-  },
-  {
-   "eval": "multihop",
-   "name": "dbl-obituary-antonym",
-   "fr_prompt": "Fait : L'antonyme de ce qu'annonce une nécrologie est \"",
-   "fr_target": "naissance",
-   "fr_intermediates": [
-    "mort"
-   ]
-  },
-  {
-   "eval": "association",
-   "name": "grief",
-   "fr_prompt": "Elle gardait sa tasse à café sur le comptoir, la lavait chaque matin et la remettait à sa place, alors que personne ne s'en était servi depuis onze mois.",
-   "fr_target": null,
-   "fr_intermediates": [
-    "deuil"
-   ]
-  },
-  {
-   "eval": "association",
-   "name": "pregnant",
-   "fr_prompt": "Elle refusa le vin avec un petit sourire et garda une main sur le bord de la table, sans tout à fait toucher son ventre.",
-   "fr_target": null,
-   "fr_intermediates": [
-    "enceinte"
-   ]
-  },
-  {
-   "eval": "association",
-   "name": "lie",
-   "fr_prompt": "Il fut incapable de croiser son regard quand elle posa la question, et la réponse arriva une demi-seconde trop vite.",
-   "fr_target": null,
-   "fr_intermediates": [
-    "mensonge"
-   ]
-  },
-  {
-   "eval": "association",
-   "name": "poverty",
-   "fr_prompt": "Elle refit le calcul deux fois avant que la caissière ne scanne le dernier article, puis reposa les céréales sans rien expliquer.",
-   "fr_target": null,
-   "fr_intermediates": [
-    "pauvreté"
-   ]
-  },
-  {
-   "eval": "association",
-   "name": "relief",
-   "fr_prompt": "Elle relut la ligne deux fois avant de s'autoriser à respirer, et la feuille trembla un peu quand elle la reposa.",
-   "fr_target": null,
-   "fr_intermediates": [
-    "soulagement"
-   ]
-  },
-  {
-   "eval": "association",
-   "name": "anger",
-   "fr_prompt": "« Ça va », dit-elle, et elle posa la tasse avec tant de précaution qu'elle ne fit aucun bruit.",
-   "fr_target": null,
-   "fr_intermediates": [
-    "colère"
-   ]
-  },
-  {
-   "eval": "association",
-   "name": "shame",
-   "fr_prompt": "Elle paya en liquide sans croiser le regard du vendeur, le petit sac déjà glissé sous son manteau avant d'atteindre la porte.",
-   "fr_target": null,
-   "fr_intermediates": [
-    "honte"
-   ]
-  },
-  {
-   "eval": "association",
-   "name": "horror",
-   "fr_prompt": "La ligne téléphonique avait été coupée peu après minuit, et à présent les grattements dans les murs étaient passés du grenier à juste derrière la porte de la chambre.",
-   "fr_target": null,
-   "fr_intermediates": [
-    "horreur"
-   ]
-  },
-  {
-   "eval": "association",
-   "name": "mother",
-   "fr_prompt": "Elle posa le dos de sa main sur son front avant même de lui dire bonjour, et il la laissa faire, comme il l'avait toujours fait, d'aussi loin qu'il s'en souvienne.",
-   "fr_target": null,
-   "fr_intermediates": [
-    "mère"
-   ]
-  },
-  {
-   "eval": "association",
-   "name": "neighbors",
-   "fr_prompt": "Elle savait à quelle heure sa voiture partait et quel soir on sortait les poubelles, et elle le saluait de la main depuis six ans sans connaître ni son prénom ni son nom.",
-   "fr_target": null,
-   "fr_intermediates": [
-    "voisins"
-   ]
-  },
-  {
-   "eval": "association",
-   "name": "teacher",
-   "fr_prompt": "Elle entoura la même faute avec la même encre rouge que sur les trente précédentes, puis prit la copie suivante sur la pile.",
-   "fr_target": null,
-   "fr_intermediates": [
-    "professeur"
-   ]
-  },
-  {
-   "eval": "association",
-   "name": "chess",
-   "fr_prompt": "Aucun des deux n'avait parlé depuis quarante minutes quand elle déplaça enfin le cavalier, et il appuya sur la pendule sans lever les yeux.",
-   "fr_target": null,
-   "fr_intermediates": [
-    "échecs"
-   ]
-  },
-  {
-   "eval": "association",
-   "name": "dawn",
-   "fr_prompt": "Le premier oiseau commença avant le ciel, et le froid avait cette finesse qui ne durerait pas une heure de plus.",
-   "fr_target": null,
-   "fr_intermediates": [
-    "aube"
-   ]
-  },
-  {
-   "eval": "association",
-   "name": "winter",
-   "fr_prompt": "La lumière déclinait déjà à seize heures et les radiateurs se réveillaient en cliquetant, l'un après l'autre, dans tout l'immeuble.",
-   "fr_target": null,
-   "fr_intermediates": [
-    "hiver"
-   ]
-  },
-  {
-   "eval": "association",
-   "name": "death-h",
-   "fr_prompt": "Les fleurs sur la table avaient déjà été changées deux fois, et la robe noire pendait encore à la porte de l'armoire, là où elle l'avait sortie la veille de la cérémonie.",
-   "fr_target": null,
-   "fr_intermediates": [
-    "mort"
-   ]
-  },
-  {
-   "eval": "association",
-   "name": "war-h",
-   "fr_prompt": "Les lettres cessèrent d'arriver après le télégramme, et elle rangea le carnet de rationnement dans le tiroir où se trouvait autrefois sa photographie.",
-   "fr_target": null,
-   "fr_intermediates": [
-    "guerre"
-   ]
-  },
-  {
-   "eval": "association",
-   "name": "love-h",
-   "fr_prompt": "Ils en étaient arrivés au point où les silences n'avaient plus besoin d'être comblés, et sa main trouva la sienne par-dessus la table sans qu'aucun des deux ne regarde.",
-   "fr_target": null,
-   "fr_intermediates": [
-    "amour"
-   ]
-  },
-  {
-   "eval": "association",
-   "name": "home-h",
-   "fr_prompt": "L'odeur le saisit avant que la porte soit complètement ouverte — un plat que sa mère avait préparé mille fois, et il eut de nouveau sept ans, exactement le temps que cela dura.",
-   "fr_target": null,
-   "fr_intermediates": [
-    "maison"
-   ]
-  },
-  {
-   "eval": "association",
-   "name": "school-h",
-   "fr_prompt": null,
-   "fr_target": null,
-   "fr_intermediates": [
-    "école"
-   ],
-   "fr_upstream_item": "fr-ecole"
-  },
-  {
-   "eval": "association",
-   "name": "church-h",
-   "fr_prompt": null,
-   "fr_target": null,
-   "fr_intermediates": [
-    "église"
-   ],
-   "fr_upstream_item": "fr-eglise"
-  },
-  {
-   "eval": "association",
-   "name": "father-h",
-   "fr_prompt": null,
-   "fr_target": null,
-   "fr_intermediates": [
-    "père"
-   ],
-   "fr_upstream_item": "fr-pere"
-  },
-  {
-   "eval": "association",
-   "name": "city-h",
-   "fr_prompt": "Le bruit ne s'arrêtait jamais, il changeait seulement de forme — les sirènes devenaient circulation, puis chantier, puis le camion-poubelle de trois heures du matin malgré lequel elle avait appris à dormir.",
-   "fr_target": null,
-   "fr_intermediates": [
-    "ville"
-   ]
-  },
-  {
-   "eval": "association",
-   "name": "field-h",
-   "fr_prompt": "Les tiges lui arrivaient au-dessus des épaules et le sentier s'était déjà refermé derrière elle, mais le toit de la ferme restait visible si elle se mettait sur la pointe des pieds.",
-   "fr_target": null,
-   "fr_intermediates": [
-    "champ"
-   ]
-  },
-  {
-   "eval": "association",
-   "name": "store-h",
-   "fr_prompt": "Le chariot avait une roue qui tirait à gauche, et arrivée au rayon six elle avait renoncé à lutter et le laissait simplement la guider.",
-   "fr_target": null,
-   "fr_intermediates": [
-    "magasin"
-   ]
-  },
-  {
-   "eval": "association",
-   "name": "music-h",
-   "fr_prompt": "La main du chef resta suspendue un instant de trop, et dans le silence avant qu'elle ne retombe, deux mille personnes retinrent leur souffle.",
-   "fr_target": null,
-   "fr_intermediates": [
-    "musique"
-   ]
-  },
-  {
-   "eval": "association",
-   "name": "history-h",
-   "fr_prompt": "Il passa les doigts sur les noms gravés dans la pierre, chacun celui d'un garçon que son grand-père avait mentionné une fois et plus jamais.",
-   "fr_target": null,
-   "fr_intermediates": [
-    "histoire"
-   ]
-  },
-  {
-   "eval": "association",
-   "name": "law-h",
-   "fr_prompt": "Elle relut la clause une troisième fois, parapha là où l'onglet l'indiquait, et essaya de ne pas penser à ce que l'alinéa 4(b) signifierait si quelqu'un l'invoquait un jour.",
-   "fr_target": null,
-   "fr_intermediates": [
-    "loi"
-   ]
-  },
-  {
-   "eval": "association",
-   "name": "night-h",
-   "fr_prompt": "La dernière lumière de porche de la rue s'éteignit, et l'obscurité s'installa si complètement que la clôture, à un mètre de là, aurait aussi bien pu être à un kilomètre.",
-   "fr_target": null,
-   "fr_intermediates": [
-    "nuit"
-   ]
-  },
-  {
-   "eval": "association",
-   "name": "past-h",
-   "fr_prompt": "La photographie datait d'avant la couleur, et elle dut plisser les yeux pour retrouver son propre visage sous toutes ces années.",
-   "fr_target": null,
-   "fr_intermediates": [
-    "passé"
-   ]
-  },
-  {
-   "eval": "association",
-   "name": "future-h",
-   "fr_prompt": "L'enfant, à qui l'on demandait ce qu'elle voulait devenir, répondit avec l'assurance de quelqu'un à qui l'on n'avait encore jamais dit non.",
-   "fr_target": null,
-   "fr_intermediates": [
-    "avenir"
-   ]
-  },
-  {
-   "eval": "association",
-   "name": "game-h",
-   "fr_prompt": "Elle déplaça la pièce, leva les yeux et attendit — et sur son visage elle vit exactement les trois coups qu'il n'avait pas vus venir.",
-   "fr_target": null,
-   "fr_intermediates": [
-    "jeu"
-   ]
-  },
-  {
-   "eval": "association",
-   "name": "free-h",
-   "fr_prompt": "Le portail bourdonna et la première chose qu'il remarqua fut combien le ciel paraissait grand sans une clôture pour le couper en deux.",
-   "fr_target": null,
-   "fr_intermediates": [
-    "libre"
-   ]
-  },
-  {
-   "eval": "association",
-   "name": "king-h",
-   "fr_prompt": "Il s'assit là où son père s'était assis, et son grand-père avant lui, et sentit le poids de chaque regard dans la salle, dans l'attente du mot qui deviendrait un ordre.",
-   "fr_target": null,
-   "fr_intermediates": [
-    "roi"
-   ]
-  },
-  {
-   "eval": "association",
-   "name": "child-h",
-   "fr_prompt": "Les dessins au crayon sur le frigo avaient commencé par des maisons et des soleils, et comprenaient maintenant quelque chose qui était soit un dragon, soit un camion — elle avait appris à ne pas demander lequel.",
-   "fr_target": null,
-   "fr_intermediates": [
-    "enfant"
-   ]
-  },
-  {
-   "eval": "association",
-   "name": "water-h",
-   "fr_prompt": "Elle retint son souffle sans le vouloir et compta les bulles qui remontaient le long du masque, chacune une seconde qu'elle ne récupérerait pas.",
-   "fr_target": null,
-   "fr_intermediates": [
-    "eau"
-   ]
-  },
-  {
-   "eval": "association",
-   "name": "space-h",
-   "fr_prompt": "Il lâcha la main courante et, pour la première fois de sa vie, plus aucune direction ne méritait le nom de bas.",
-   "fr_target": null,
-   "fr_intermediates": [
-    "espace"
-   ]
-  },
-  {
-   "eval": "association",
-   "name": "light-h",
-   "fr_prompt": "Il était dans le tunnel depuis assez longtemps pour avoir oublié à quoi ressemblaient les couleurs, et quand l'autre bout finit par s'éclaircir, ses yeux se mirent à pleurer avant qu'il puisse savoir si c'était réel.",
-   "fr_target": null,
-   "fr_intermediates": [
-    "lumière"
-   ]
-  },
-  {
-   "eval": "association",
-   "name": "book-h",
-   "fr_prompt": "Elle corna la page, le posa à l'envers sur l'accoudoir du fauteuil, et se rappela qu'elle s'était promis « encore un seul chapitre » trois chapitres plus tôt.",
-   "fr_target": null,
-   "fr_intermediates": [
-    "livre"
-   ]
-  },
-  {
-   "eval": "association",
-   "name": "time-h",
-   "fr_prompt": "Elle aperçut son reflet dans la vitrine et, l'espace d'une seconde, ne reconnut pas ce visage — pas plus vieux exactement, seulement plus avancé qu'elle ne s'en était rendu compte.",
-   "fr_target": null,
-   "fr_intermediates": [
-    "temps"
-   ]
-  }
- ],
- "french_multilingual": {
-  "french-season-summer": [
-   "français",
-   "saison",
-   "été",
-   "automne"
-  ],
-  "french-number-seven": [
-   "français",
-   "nombre",
-   "sept",
-   "huit"
-  ],
-  "french-body-walk": [
-   "français",
-   "corps",
-   "marcher",
-   "pieds"
-  ],
-  "french-family-nephew": [
-   "français",
-   "famille",
-   "fils",
-   "neveu"
-  ],
-  "fr-month-after-jan": [
-   "français",
-   "mois",
-   "janvier",
-   "février"
-  ],
-  "fr-month-after-may": [
-   "français",
-   "mois",
-   "mai",
-   "juin"
-  ],
-  "fr-month-before-mar": [
-   "français",
-   "mois",
-   "mars",
-   "février"
-  ],
-  "fr-half-six": [
-   "français",
-   "moitié",
-   "six",
-   "trois"
-  ],
-  "fr-double-three": [
-   "français",
-   "double",
-   "trois",
-   "six"
-  ],
-  "fr-number-after-four": [
-   "français",
-   "nombre",
-   "quatre",
-   "cinq"
-  ],
-  "fr-color-night": [
-   "français",
-   "couleur",
-   "nuit",
-   "noir"
-  ],
-  "fr-time-after-night": [
-   "français",
-   "temps",
-   "nuit",
-   "jour"
-  ],
-  "fr-size-big-small": [
-   "français",
-   "taille",
-   "grand",
-   "petit"
-  ],
-  "fr-place-up-down": [
-   "français",
-   "lieu",
-   "haut",
-   "bas"
-  ],
-  "fr-place-near-far": [
-   "français",
-   "lieu",
-   "près",
-   "loin"
-  ],
-  "fr-time-old-young": [
-   "français",
-   "temps",
-   "vieux",
-   "jeune"
-  ],
-  "fr-order-first-last": [
-   "français",
-   "ordre",
-   "premier",
-   "dernier"
-  ]
- }
+    "_comment": "French side of the bilingual benchmark. For an upstream item, the English prompt, target and intermediates are read from the upstream jpp_lens data by (eval, name). A custom item (no upstream counterpart) carries its own English side in en_prompt, en_target, en_intermediates. fr_prompt null + fr_upstream_item: reuse the prompt of that upstream French item. Each French intermediate must be the same concept as the English one; when no single-token French word exists, keep the true translation (it is then skipped by the scorer) rather than a different concept. Check with validate_parallel_items.py after every edit.",
+    "parallel": [
+        {
+            "eval": "multihop",
+            "name": "carnival-ocean",
+            "fr_prompt": "Fait : L'océan qui borde le pays où le carnaval est le plus célèbre est l'océan ",
+            "fr_target": "Atlantique",
+            "fr_intermediates": [
+                "Brésil"
+            ]
+        },
+        {
+            "eval": "multihop",
+            "name": "amazon-language",
+            "fr_prompt": "Fait : La langue officielle du pays où se jette le fleuve Amazone est le ",
+            "fr_target": "portugais",
+            "fr_intermediates": [
+                "Brésil"
+            ]
+        },
+        {
+            "eval": "multihop",
+            "name": "paper-continent",
+            "fr_prompt": "Fait : Le continent où se trouve le pays qui a inventé le papier est l'",
+            "fr_target": "Asie",
+            "fr_intermediates": [
+                "Chine"
+            ]
+        },
+        {
+            "eval": "multihop",
+            "name": "christmas-season",
+            "fr_prompt": "Fait : La saison pendant laquelle on décore un sapin pour les fêtes de fin d'année est l'",
+            "fr_target": "hiver",
+            "fr_intermediates": [
+                "Noël"
+            ]
+        },
+        {
+            "eval": "multihop",
+            "name": "atomic-26-symbol",
+            "fr_prompt": "Fait : Le symbole chimique de l'élément de numéro atomique 26 est ",
+            "fr_target": "Fe",
+            "fr_intermediates": [
+                "fer"
+            ]
+        },
+        {
+            "eval": "multihop",
+            "name": "atomic-80-state",
+            "fr_prompt": "Fait : À température ambiante, l'état physique de l'élément de numéro atomique 80 est ",
+            "fr_target": "liquide",
+            "fr_intermediates": [
+                "mercure"
+            ]
+        },
+        {
+            "eval": "multihop",
+            "name": "planet-3-moons",
+            "fr_prompt": "Fait : Le nombre de satellites naturels en orbite autour de la troisième planète à partir du Soleil est ",
+            "fr_target": "1",
+            "fr_intermediates": [
+                "Terre"
+            ]
+        },
+        {
+            "eval": "multihop",
+            "name": "chem-organic-Z",
+            "fr_prompt": "Fait : Le numéro atomique de l'élément présent par définition dans tous les composés organiques est ",
+            "fr_target": "6",
+            "fr_intermediates": [
+                "carbone"
+            ]
+        },
+        {
+            "eval": "multihop",
+            "name": "func-pumps-chambers",
+            "fr_prompt": "Fait : Le nombre de cavités de l'organe humain qui pompe le sang dans tout le corps est ",
+            "fr_target": "4",
+            "fr_intermediates": [
+                "cœur"
+            ]
+        },
+        {
+            "eval": "multihop",
+            "name": "func-filters-count",
+            "fr_prompt": "Fait : Le nombre d'organes humains qui filtrent le sang pour produire l'urine est ",
+            "fr_target": "2",
+            "fr_intermediates": [
+                "rein"
+            ]
+        },
+        {
+            "eval": "multihop",
+            "name": "super-largest-country-capital",
+            "fr_prompt": "Fait : La capitale du plus grand pays du monde par sa superficie est ",
+            "fr_target": "Moscou",
+            "fr_intermediates": [
+                "Russie"
+            ]
+        },
+        {
+            "eval": "multihop",
+            "name": "super-populous-capital",
+            "fr_prompt": "Fait : La capitale du pays le plus peuplé du monde est ",
+            "fr_target": "Pékin",
+            "fr_intermediates": [
+                "Chine"
+            ]
+        },
+        {
+            "eval": "multihop",
+            "name": "colosseum-currency",
+            "fr_prompt": "Fait : La monnaie officielle du pays où se dresse le Colisée est l'",
+            "fr_target": "euro",
+            "fr_intermediates": [
+                "Italie"
+            ]
+        },
+        {
+            "eval": "multihop",
+            "name": "greatwall-ocean",
+            "fr_prompt": "Fait : L'océan situé à l'est du pays qui a bâti la Grande Muraille est l'océan ",
+            "fr_target": "Pacifique",
+            "fr_intermediates": [
+                "Chine"
+            ]
+        },
+        {
+            "eval": "multihop",
+            "name": "tajmahal-continent",
+            "fr_prompt": "Fait : Le continent où se trouve le pays qui abrite le Taj Mahal est l'",
+            "fr_target": "Asie",
+            "fr_intermediates": [
+                "Inde"
+            ]
+        },
+        {
+            "eval": "multihop",
+            "name": "holiday-independence-monthnum",
+            "fr_prompt": "Fait : En chiffres, le numéro du mois où l'on célèbre la fête nationale américaine est le ",
+            "fr_target": "7",
+            "fr_intermediates": [
+                "juillet"
+            ]
+        },
+        {
+            "eval": "multihop",
+            "name": "holiday-christmas-monthnum",
+            "fr_prompt": "Fait : En chiffres, le numéro du mois où l'on célèbre Noël est le ",
+            "fr_target": "12",
+            "fr_intermediates": [
+                "décembre"
+            ]
+        },
+        {
+            "eval": "multihop",
+            "name": "holiday-halloween-monthnum",
+            "fr_prompt": "Fait : En chiffres, le numéro du mois où l'on fête Halloween est le ",
+            "fr_target": "10",
+            "fr_intermediates": [
+                "octobre"
+            ]
+        },
+        {
+            "eval": "multihop",
+            "name": "holiday-valentines-monthnum",
+            "fr_prompt": "Fait : En chiffres, le numéro du mois où l'on célèbre la Saint-Valentin est le ",
+            "fr_target": "2",
+            "fr_intermediates": [
+                "février"
+            ]
+        },
+        {
+            "eval": "multihop",
+            "name": "etym-janus-monthnum",
+            "fr_prompt": "Fait : En chiffres, le numéro du mois nommé d'après le dieu romain Janus est le ",
+            "fr_target": "1",
+            "fr_intermediates": [
+                "janvier"
+            ]
+        },
+        {
+            "eval": "multihop",
+            "name": "month-7-namedafter",
+            "fr_prompt": "Fait : Le septième mois de l'année porte le nom du général romain Jules ",
+            "fr_target": "César",
+            "fr_intermediates": [
+                "juillet"
+            ]
+        },
+        {
+            "eval": "multihop",
+            "name": "etym-caesar-monthnum",
+            "fr_prompt": "Fait : En chiffres, le numéro du mois nommé d'après Jules César est le ",
+            "fr_target": "7",
+            "fr_intermediates": [
+                "juillet"
+            ]
+        },
+        {
+            "eval": "multihop",
+            "name": "inv-balloon-opposite",
+            "fr_prompt": "Fait : La direction opposée à celle vers laquelle monte un ballon d'hélium est le ",
+            "fr_target": "bas",
+            "fr_intermediates": [
+                "haut"
+            ]
+        },
+        {
+            "eval": "multihop",
+            "name": "inv-roots-opposite",
+            "fr_prompt": "Fait : La direction opposée à celle vers laquelle poussent les racines d'un arbre est le ",
+            "fr_target": "haut",
+            "fr_intermediates": [
+                "bas"
+            ]
+        },
+        {
+            "eval": "multihop",
+            "name": "inv-antarctica-opposite",
+            "fr_prompt": "Fait : Le point cardinal opposé à l'hémisphère où se situe l'Antarctique est le ",
+            "fr_target": "nord",
+            "fr_intermediates": [
+                "sud"
+            ]
+        },
+        {
+            "eval": "multihop",
+            "name": "succ-halloween-nextmonth",
+            "fr_prompt": "Fait : Le mois qui suit immédiatement celui d'Halloween est ",
+            "fr_target": "novembre",
+            "fr_intermediates": [
+                "octobre"
+            ]
+        },
+        {
+            "eval": "multihop",
+            "name": "pred-valentines-prevmonth",
+            "fr_prompt": "Fait : Le mois qui précède immédiatement celui de la Saint-Valentin est ",
+            "fr_target": "janvier",
+            "fr_intermediates": [
+                "février"
+            ]
+        },
+        {
+            "eval": "multihop",
+            "name": "dual-stars-visible-opposite",
+            "fr_prompt": "Fait : Le contraire du moment de la journée où les étoiles brillent dans le ciel est le ",
+            "fr_target": "jour",
+            "fr_intermediates": [
+                "nuit"
+            ]
+        },
+        {
+            "eval": "multihop",
+            "name": "dual-photosynthesis-opposite",
+            "fr_prompt": "Fait : Le contraire du moment de la journée où les plantes réalisent la photosynthèse est la ",
+            "fr_target": "nuit",
+            "fr_intermediates": [
+                "jour"
+            ]
+        },
+        {
+            "eval": "multihop",
+            "name": "dbl-armistice-antonym",
+            "fr_prompt": "Fait : Le contraire de ce à quoi un armistice met fin est la ",
+            "fr_target": "paix",
+            "fr_intermediates": [
+                "guerre"
+            ]
+        },
+        {
+            "eval": "multihop",
+            "name": "dbl-obituary-antonym",
+            "fr_prompt": "Fait : Le contraire de ce qu'annonce un avis de décès est la ",
+            "fr_target": "naissance",
+            "fr_intermediates": [
+                "mort"
+            ]
+        },
+        {
+            "eval": "association",
+            "name": "grief",
+            "fr_prompt": "Elle gardait sa tasse à café sur le comptoir, la lavait chaque matin et la remettait à sa place, alors que personne ne s'en était servi depuis onze mois.",
+            "fr_target": null,
+            "fr_intermediates": [
+                "deuil"
+            ]
+        },
+        {
+            "eval": "association",
+            "name": "pregnant",
+            "fr_prompt": "Elle refusa le vin avec un petit sourire et garda une main sur le bord de la table, sans tout à fait toucher son ventre.",
+            "fr_target": null,
+            "fr_intermediates": [
+                "grossesse"
+            ]
+        },
+        {
+            "eval": "association",
+            "name": "lie",
+            "fr_prompt": "Il fut incapable de croiser son regard quand elle posa la question, et la réponse arriva une demi-seconde trop vite.",
+            "fr_target": null,
+            "fr_intermediates": [
+                "mensonge"
+            ]
+        },
+        {
+            "eval": "association",
+            "name": "poverty",
+            "fr_prompt": "Elle refit le calcul deux fois avant que la caissière ne scanne le dernier article, puis reposa les céréales sans rien expliquer.",
+            "fr_target": null,
+            "fr_intermediates": [
+                "pauvreté"
+            ]
+        },
+        {
+            "eval": "association",
+            "name": "relief",
+            "fr_prompt": "Elle relut la ligne deux fois avant de s'autoriser à respirer, et la feuille trembla un peu quand elle la reposa.",
+            "fr_target": null,
+            "fr_intermediates": [
+                "soulagement"
+            ]
+        },
+        {
+            "eval": "association",
+            "name": "anger",
+            "fr_prompt": "« Ça va », dit-elle, et elle posa la tasse avec tant de précaution qu'elle ne fit aucun bruit.",
+            "fr_target": null,
+            "fr_intermediates": [
+                "colère"
+            ]
+        },
+        {
+            "eval": "association",
+            "name": "shame",
+            "fr_prompt": "Elle paya en liquide sans croiser le regard du vendeur, le petit sac déjà glissé sous son manteau avant d'atteindre la porte.",
+            "fr_target": null,
+            "fr_intermediates": [
+                "honte"
+            ]
+        },
+        {
+            "eval": "association",
+            "name": "horror",
+            "fr_prompt": "La ligne téléphonique avait été coupée peu après minuit, et à présent les grattements dans les murs étaient passés du grenier à juste derrière la porte de la chambre.",
+            "fr_target": null,
+            "fr_intermediates": [
+                "horreur"
+            ]
+        },
+        {
+            "eval": "association",
+            "name": "mother",
+            "fr_prompt": "Elle posa le dos de sa main sur son front avant même de lui dire bonjour, et il la laissa faire, comme il l'avait toujours fait, d'aussi loin qu'il s'en souvienne.",
+            "fr_target": null,
+            "fr_intermediates": [
+                "mère"
+            ]
+        },
+        {
+            "eval": "association",
+            "name": "neighbors",
+            "fr_prompt": "Elle savait à quelle heure sa voiture partait et quel soir on sortait les poubelles, et elle le saluait de la main depuis six ans sans connaître ni son prénom ni son nom.",
+            "fr_target": null,
+            "fr_intermediates": [
+                "voisins"
+            ]
+        },
+        {
+            "eval": "association",
+            "name": "teacher",
+            "fr_prompt": "Elle entoura la même faute avec la même encre rouge que sur les trente précédentes, puis prit la copie suivante sur la pile.",
+            "fr_target": null,
+            "fr_intermediates": [
+                "professeur"
+            ]
+        },
+        {
+            "eval": "association",
+            "name": "chess",
+            "fr_prompt": "Aucun des deux n'avait parlé depuis quarante minutes quand elle déplaça enfin le cavalier, et il appuya sur la pendule sans lever les yeux.",
+            "fr_target": null,
+            "fr_intermediates": [
+                "échecs"
+            ]
+        },
+        {
+            "eval": "association",
+            "name": "dawn",
+            "fr_prompt": "Le premier oiseau commença avant le ciel, et le froid avait cette finesse qui ne durerait pas une heure de plus.",
+            "fr_target": null,
+            "fr_intermediates": [
+                "aube"
+            ]
+        },
+        {
+            "eval": "association",
+            "name": "winter",
+            "fr_prompt": "La lumière déclinait déjà à seize heures et les radiateurs se réveillaient en cliquetant, l'un après l'autre, dans tout l'immeuble.",
+            "fr_target": null,
+            "fr_intermediates": [
+                "hiver"
+            ]
+        },
+        {
+            "eval": "association",
+            "name": "death-h",
+            "fr_prompt": "Les fleurs sur la table avaient déjà été changées deux fois, et la robe noire pendait encore à la porte de l'armoire, là où elle l'avait sortie la veille de la cérémonie.",
+            "fr_target": null,
+            "fr_intermediates": [
+                "mort"
+            ]
+        },
+        {
+            "eval": "association",
+            "name": "war-h",
+            "fr_prompt": "Les lettres cessèrent d'arriver après le télégramme, et elle rangea le carnet de rationnement dans le tiroir où se trouvait autrefois sa photographie.",
+            "fr_target": null,
+            "fr_intermediates": [
+                "guerre"
+            ]
+        },
+        {
+            "eval": "association",
+            "name": "love-h",
+            "fr_prompt": "Ils en étaient arrivés au point où les silences n'avaient plus besoin d'être comblés, et sa main trouva la sienne par-dessus la table sans qu'aucun des deux ne regarde.",
+            "fr_target": null,
+            "fr_intermediates": [
+                "amour"
+            ]
+        },
+        {
+            "eval": "association",
+            "name": "home-h",
+            "fr_prompt": "L'odeur le saisit avant que la porte soit complètement ouverte — un plat que sa mère avait préparé mille fois, et il eut de nouveau sept ans, exactement le temps que cela dura.",
+            "fr_target": null,
+            "fr_intermediates": [
+                "maison"
+            ]
+        },
+        {
+            "eval": "association",
+            "name": "school-h",
+            "fr_prompt": "La sonnerie retentit et trente chaises raclèrent le sol en même temps, mais elle resta à sa table, les yeux toujours fixés sur les marques rouges de la page trois.",
+            "fr_target": null,
+            "fr_intermediates": [
+                "école"
+            ]
+        },
+        {
+            "eval": "association",
+            "name": "church-h",
+            "fr_prompt": "L'orgue tint la dernière note plus longtemps que quiconque ne s'y attendait, et elle garda la tête baissée jusqu'à ce que l'écho se soit complètement éteint.",
+            "fr_target": null,
+            "fr_intermediates": [
+                "église"
+            ]
+        },
+        {
+            "eval": "association",
+            "name": "father-h",
+            "fr_prompt": "Il lui montra comment tenir la clé à molette comme son propre paternel le lui avait montré, et ne fit pas remarquer que c'était la troisième fois ce mois-ci qu'elle le lui demandait.",
+            "fr_target": null,
+            "fr_intermediates": [
+                "père"
+            ]
+        },
+        {
+            "eval": "association",
+            "name": "city-h",
+            "fr_prompt": "Le bruit ne s'arrêtait jamais, il changeait seulement de forme — les sirènes devenaient circulation, puis chantier, puis le camion-poubelle de trois heures du matin malgré lequel elle avait appris à dormir.",
+            "fr_target": null,
+            "fr_intermediates": [
+                "ville"
+            ]
+        },
+        {
+            "eval": "association",
+            "name": "field-h",
+            "fr_prompt": "Les tiges lui arrivaient au-dessus des épaules et le sentier s'était déjà refermé derrière elle, mais le toit de la ferme restait visible si elle se mettait sur la pointe des pieds.",
+            "fr_target": null,
+            "fr_intermediates": [
+                "champ"
+            ]
+        },
+        {
+            "eval": "association",
+            "name": "store-h",
+            "fr_prompt": "Le chariot avait une roue qui tirait à gauche, et arrivée au rayon six elle avait renoncé à lutter et le laissait simplement la guider.",
+            "fr_target": null,
+            "fr_intermediates": [
+                "magasin"
+            ]
+        },
+        {
+            "eval": "association",
+            "name": "music-h",
+            "fr_prompt": "La main du chef resta suspendue un instant de trop, et dans le silence avant qu'elle ne retombe, deux mille personnes retinrent leur souffle.",
+            "fr_target": null,
+            "fr_intermediates": [
+                "musique"
+            ]
+        },
+        {
+            "eval": "association",
+            "name": "history-h",
+            "fr_prompt": "Il passa les doigts sur les noms gravés dans la pierre, chacun celui d'un garçon que son grand-père avait mentionné une fois et plus jamais.",
+            "fr_target": null,
+            "fr_intermediates": [
+                "histoire"
+            ]
+        },
+        {
+            "eval": "association",
+            "name": "law-h",
+            "fr_prompt": "Elle relut la clause une troisième fois, parapha là où l'onglet l'indiquait, et essaya de ne pas penser à ce que l'alinéa 4(b) signifierait si quelqu'un l'invoquait un jour.",
+            "fr_target": null,
+            "fr_intermediates": [
+                "loi"
+            ]
+        },
+        {
+            "eval": "association",
+            "name": "night-h",
+            "fr_prompt": "La dernière lumière de porche de la rue s'éteignit, et l'obscurité s'installa si complètement que la clôture, à un mètre de là, aurait aussi bien pu être à un kilomètre.",
+            "fr_target": null,
+            "fr_intermediates": [
+                "nuit"
+            ]
+        },
+        {
+            "eval": "association",
+            "name": "past-h",
+            "fr_prompt": "La photographie datait d'avant la couleur, et elle dut plisser les yeux pour retrouver son propre visage sous toutes ces années.",
+            "fr_target": null,
+            "fr_intermediates": [
+                "passé"
+            ]
+        },
+        {
+            "eval": "association",
+            "name": "future-h",
+            "fr_prompt": "L'enfant, à qui l'on demandait ce qu'elle voulait devenir, répondit avec l'assurance de quelqu'un à qui l'on n'avait encore jamais dit non.",
+            "fr_target": null,
+            "fr_intermediates": [
+                "avenir"
+            ]
+        },
+        {
+            "eval": "association",
+            "name": "game-h",
+            "fr_prompt": "Elle déplaça la pièce, leva les yeux et attendit — et sur son visage elle vit exactement les trois coups qu'il n'avait pas vus venir.",
+            "fr_target": null,
+            "fr_intermediates": [
+                "jeu"
+            ]
+        },
+        {
+            "eval": "association",
+            "name": "free-h",
+            "fr_prompt": "Le portail bourdonna et la première chose qu'il remarqua fut combien le ciel paraissait grand sans une clôture pour le couper en deux.",
+            "fr_target": null,
+            "fr_intermediates": [
+                "libre"
+            ]
+        },
+        {
+            "eval": "association",
+            "name": "king-h",
+            "fr_prompt": "Il s'assit là où son père s'était assis, et son grand-père avant lui, et sentit le poids de chaque regard dans la salle, dans l'attente du mot qui deviendrait un ordre.",
+            "fr_target": null,
+            "fr_intermediates": [
+                "roi"
+            ]
+        },
+        {
+            "eval": "association",
+            "name": "child-h",
+            "fr_prompt": "Les dessins au crayon sur le frigo avaient commencé par des maisons et des soleils, et comprenaient maintenant quelque chose qui était soit un dragon, soit un camion — elle avait appris à ne pas demander lequel.",
+            "fr_target": null,
+            "fr_intermediates": [
+                "enfant"
+            ]
+        },
+        {
+            "eval": "association",
+            "name": "water-h",
+            "fr_prompt": "Elle retint son souffle sans le vouloir et compta les bulles qui remontaient le long du masque, chacune une seconde qu'elle ne récupérerait pas.",
+            "fr_target": null,
+            "fr_intermediates": [
+                "eau"
+            ]
+        },
+        {
+            "eval": "association",
+            "name": "space-h",
+            "fr_prompt": "Il lâcha la main courante et, pour la première fois de sa vie, plus aucune direction ne méritait le nom de bas.",
+            "fr_target": null,
+            "fr_intermediates": [
+                "espace"
+            ]
+        },
+        {
+            "eval": "association",
+            "name": "light-h",
+            "fr_prompt": "Il était dans le tunnel depuis assez longtemps pour avoir oublié à quoi ressemblaient les couleurs, et quand l'autre bout finit par s'éclaircir, ses yeux se mirent à pleurer avant qu'il puisse savoir si c'était réel.",
+            "fr_target": null,
+            "fr_intermediates": [
+                "lumière"
+            ]
+        },
+        {
+            "eval": "association",
+            "name": "book-h",
+            "fr_prompt": "Elle corna la page, le posa à l'envers sur l'accoudoir du fauteuil, et se rappela qu'elle s'était promis « encore un seul chapitre » trois chapitres plus tôt.",
+            "fr_target": null,
+            "fr_intermediates": [
+                "livre"
+            ]
+        },
+        {
+            "eval": "association",
+            "name": "time-h",
+            "fr_prompt": "Elle aperçut son reflet dans la vitrine et, l'espace d'une seconde, ne reconnut pas ce visage — pas plus vieux exactement, seulement plus avancé qu'elle ne s'en était rendu compte.",
+            "fr_target": null,
+            "fr_intermediates": [
+                "temps"
+            ]
+        },
+        {
+            "eval": "multihop",
+            "name": "atomic-47-symbol",
+            "en_prompt": "Fact: The chemical symbol for the precious metal with atomic number 47 is ",
+            "en_target": "Ag",
+            "en_intermediates": [
+                "silver"
+            ],
+            "fr_prompt": "Fait : Le symbole chimique du métal précieux de numéro atomique 47 est ",
+            "fr_target": "Ag",
+            "fr_intermediates": [
+                "argent"
+            ]
+        },
+        {
+            "eval": "multihop",
+            "name": "atomic-82-symbol",
+            "en_prompt": "Fact: The chemical symbol for the heavy metal with atomic number 82 is ",
+            "en_target": "Pb",
+            "en_intermediates": [
+                "lead"
+            ],
+            "fr_prompt": "Fait : Le symbole chimique du métal lourd de numéro atomique 82 est ",
+            "fr_target": "Pb",
+            "fr_intermediates": [
+                "plomb"
+            ]
+        },
+        {
+            "eval": "multihop",
+            "name": "fuji-capital",
+            "en_prompt": "Fact: The capital of the country where Mount Fuji rises is ",
+            "en_target": "Tokyo",
+            "en_intermediates": [
+                "Japan"
+            ],
+            "fr_prompt": "Fait : La capitale du pays où s'élève le mont Fuji est ",
+            "fr_target": "Tokyo",
+            "fr_intermediates": [
+                "Japon"
+            ]
+        },
+        {
+            "eval": "multihop",
+            "name": "fuji-currency",
+            "en_prompt": "Fact: The currency of the country where Mount Fuji stands is the ",
+            "en_target": "yen",
+            "en_intermediates": [
+                "Japan"
+            ],
+            "fr_prompt": "Fait : La monnaie du pays où se trouve le mont Fuji est le ",
+            "fr_target": "yen",
+            "fr_intermediates": [
+                "Japon"
+            ]
+        },
+        {
+            "eval": "multihop",
+            "name": "flamenco-capital",
+            "en_prompt": "Fact: The capital of the country where flamenco originated is ",
+            "en_target": "Madrid",
+            "en_intermediates": [
+                "Spain"
+            ],
+            "fr_prompt": "Fait : La capitale du pays d'origine du flamenco est ",
+            "fr_target": "Madrid",
+            "fr_intermediates": [
+                "Espagne"
+            ]
+        },
+        {
+            "eval": "multihop",
+            "name": "oktoberfest-capital",
+            "en_prompt": "Fact: The capital of the country where the Oktoberfest festival was born is ",
+            "en_target": "Berlin",
+            "en_intermediates": [
+                "Germany"
+            ],
+            "fr_prompt": "Fait : La capitale du pays où est née la fête de l'Oktoberfest est ",
+            "fr_target": "Berlin",
+            "fr_intermediates": [
+                "Allemagne"
+            ]
+        },
+        {
+            "eval": "multihop",
+            "name": "tajmahal-capital",
+            "en_prompt": "Fact: The capital of the country where the Taj Mahal stands is New ",
+            "en_target": "Delhi",
+            "en_intermediates": [
+                "India"
+            ],
+            "fr_prompt": "Fait : La capitale du pays où se dresse le Taj Mahal est New ",
+            "fr_target": "Delhi",
+            "fr_intermediates": [
+                "Inde"
+            ]
+        },
+        {
+            "eval": "multihop",
+            "name": "water-boil-celsius",
+            "en_prompt": "Fact: At normal pressure, the temperature in degrees Celsius at which the liquid made of H2O boils is ",
+            "en_target": "100",
+            "en_intermediates": [
+                "water"
+            ],
+            "fr_prompt": "Fait : À pression normale, la température en degrés Celsius à laquelle bout le liquide composé de H2O est ",
+            "fr_target": "100",
+            "fr_intermediates": [
+                "eau"
+            ]
+        },
+        {
+            "eval": "multihop",
+            "name": "water-freeze-celsius",
+            "en_prompt": "Fact: At normal pressure, the temperature in degrees Celsius at which the liquid made of H2O freezes is ",
+            "en_target": "0",
+            "en_intermediates": [
+                "water"
+            ],
+            "fr_prompt": "Fait : À pression normale, la température en degrés Celsius à laquelle gèle le liquide composé de H2O est ",
+            "fr_target": "0",
+            "fr_intermediates": [
+                "eau"
+            ]
+        },
+        {
+            "eval": "multihop",
+            "name": "snow-color-opposite",
+            "en_prompt": "Fact: The color opposite to that of the winter precipitation that falls in flakes is ",
+            "en_target": "black",
+            "en_intermediates": [
+                "white"
+            ],
+            "fr_prompt": "Fait : La couleur opposée à celle de la précipitation hivernale en flocons est le ",
+            "fr_target": "noir",
+            "fr_intermediates": [
+                "blanc"
+            ]
+        },
+        {
+            "eval": "multihop",
+            "name": "coal-color-opposite",
+            "en_prompt": "Fact: The color opposite to that of coal is ",
+            "en_target": "white",
+            "en_intermediates": [
+                "black"
+            ],
+            "fr_prompt": "Fait : La couleur opposée à celle du charbon est le ",
+            "fr_target": "blanc",
+            "fr_intermediates": [
+                "noir"
+            ]
+        },
+        {
+            "eval": "multihop",
+            "name": "blood-vein-color",
+            "en_prompt": "Fact: The color of the vital fluid that flows through human arteries is ",
+            "en_target": "red",
+            "en_intermediates": [
+                "blood"
+            ],
+            "fr_prompt": "Fait : La couleur du liquide vital qui circule dans les artères humaines est le ",
+            "fr_target": "rouge",
+            "fr_intermediates": [
+                "sang"
+            ]
+        },
+        {
+            "eval": "multihop",
+            "name": "sky-clear-color",
+            "en_prompt": "Fact: In clear weather at midday, the color of the vault of the heavens above our heads is ",
+            "en_target": "blue",
+            "en_intermediates": [
+                "sky"
+            ],
+            "fr_prompt": "Fait : Par temps dégagé en pleine journée, la couleur de la voûte céleste au-dessus de nos têtes est le ",
+            "fr_target": "bleu",
+            "fr_intermediates": [
+                "ciel"
+            ]
+        },
+        {
+            "eval": "multihop",
+            "name": "sun-set-direction",
+            "en_prompt": "Fact: The cardinal direction in which the star at the center of our solar system sets is ",
+            "en_target": "west",
+            "en_intermediates": [
+                "Sun"
+            ],
+            "fr_prompt": "Fait : Le point cardinal vers lequel se couche l'étoile au centre de notre système solaire est l'",
+            "fr_target": "ouest",
+            "fr_intermediates": [
+                "Soleil"
+            ]
+        },
+        {
+            "eval": "multihop",
+            "name": "sun-rise-direction",
+            "en_prompt": "Fact: The cardinal direction in which the star that lights the Earth by day rises is ",
+            "en_target": "east",
+            "en_intermediates": [
+                "Sun"
+            ],
+            "fr_prompt": "Fait : Le point cardinal où se lève l'étoile qui éclaire la Terre le jour est l'",
+            "fr_target": "est",
+            "fr_intermediates": [
+                "Soleil"
+            ]
+        },
+        {
+            "eval": "multihop",
+            "name": "wine-fruit",
+            "en_prompt": "Fact: The fermented fruit used to make the traditional drink of Bordeaux is the ",
+            "en_target": "grape",
+            "en_intermediates": [
+                "wine"
+            ],
+            "fr_prompt": "Fait : Le fruit fermenté utilisé pour fabriquer la boisson traditionnelle de Bordeaux est le ",
+            "fr_target": "raisin",
+            "fr_intermediates": [
+                "vin"
+            ]
+        },
+        {
+            "eval": "multihop",
+            "name": "bread-grain",
+            "en_prompt": "Fact: The cereal whose flour is ground to bake a traditional baguette is ",
+            "en_target": "wheat",
+            "en_intermediates": [
+                "bread"
+            ],
+            "fr_prompt": "Fait : La céréale dont on moud la farine pour cuire une baguette traditionnelle est le ",
+            "fr_target": "blé",
+            "fr_intermediates": [
+                "pain"
+            ]
+        },
+        {
+            "eval": "multihop",
+            "name": "milk-animal",
+            "en_prompt": "Fact: The farm animal that produces the white liquid used to make cheese is the ",
+            "en_target": "cow",
+            "en_intermediates": [
+                "milk"
+            ],
+            "fr_prompt": "Fait : L'animal de ferme qui produit le liquide blanc utilisé pour faire du fromage est la ",
+            "fr_target": "vache",
+            "fr_intermediates": [
+                "lait"
+            ]
+        },
+        {
+            "eval": "multihop",
+            "name": "salt-taste-opposite",
+            "en_prompt": "Fact: The taste opposite to that of the sodium chloride used in cooking is ",
+            "en_target": "sweet",
+            "en_intermediates": [
+                "salt"
+            ],
+            "fr_prompt": "Fait : La saveur opposée à celle du chlorure de sodium utilisé en cuisine est le ",
+            "fr_target": "sucré",
+            "fr_intermediates": [
+                "sel"
+            ]
+        },
+        {
+            "eval": "multihop",
+            "name": "winter-opposite-season",
+            "en_prompt": "Fact: The season opposite to the one of the December solstice in the northern hemisphere is ",
+            "en_target": "summer",
+            "en_intermediates": [
+                "winter"
+            ],
+            "fr_prompt": "Fait : La saison opposée à celle du solstice de décembre dans l'hémisphère nord est l'",
+            "fr_target": "été",
+            "fr_intermediates": [
+                "hiver"
+            ]
+        },
+        {
+            "eval": "multihop",
+            "name": "summer-opposite-season",
+            "en_prompt": "Fact: The season opposite to the one of the July-August holidays in Europe is ",
+            "en_target": "winter",
+            "en_intermediates": [
+                "summer"
+            ],
+            "fr_prompt": "Fait : La saison opposée à celle des grandes vacances de juillet-août en Europe est l'",
+            "fr_target": "hiver",
+            "fr_intermediates": [
+                "été"
+            ]
+        },
+        {
+            "eval": "multihop",
+            "name": "dog-legs",
+            "en_prompt": "Fact: The number of legs of man's best friend is ",
+            "en_target": "4",
+            "en_intermediates": [
+                "dog"
+            ],
+            "fr_prompt": "Fait : Le nombre de pattes du meilleur ami de l'homme est ",
+            "fr_target": "4",
+            "fr_intermediates": [
+                "chien"
+            ]
+        }
+    ],
+    "french_multilingual": {
+        "french-season-summer": [
+            "français",
+            "saison",
+            "été",
+            "automne"
+        ],
+        "french-number-seven": [
+            "français",
+            "nombre",
+            "sept",
+            "huit"
+        ],
+        "french-body-walk": [
+            "français",
+            "corps",
+            "marcher",
+            "pieds"
+        ],
+        "french-family-nephew": [
+            "français",
+            "famille",
+            "fils",
+            "neveu"
+        ],
+        "fr-month-after-jan": [
+            "français",
+            "mois",
+            "janvier",
+            "février"
+        ],
+        "fr-month-after-may": [
+            "français",
+            "mois",
+            "mai",
+            "juin"
+        ],
+        "fr-month-before-mar": [
+            "français",
+            "mois",
+            "mars",
+            "février"
+        ],
+        "fr-half-six": [
+            "français",
+            "moitié",
+            "six",
+            "trois"
+        ],
+        "fr-double-three": [
+            "français",
+            "double",
+            "trois",
+            "six"
+        ],
+        "fr-number-after-four": [
+            "français",
+            "nombre",
+            "quatre",
+            "cinq"
+        ],
+        "fr-color-night": [
+            "français",
+            "couleur",
+            "nuit",
+            "noir"
+        ],
+        "fr-time-after-night": [
+            "français",
+            "temps",
+            "nuit",
+            "jour"
+        ],
+        "fr-size-big-small": [
+            "français",
+            "taille",
+            "grand",
+            "petit"
+        ],
+        "fr-place-up-down": [
+            "français",
+            "lieu",
+            "haut",
+            "bas"
+        ],
+        "fr-place-near-far": [
+            "français",
+            "lieu",
+            "près",
+            "loin"
+        ],
+        "fr-time-old-young": [
+            "français",
+            "temps",
+            "vieux",
+            "jeune"
+        ],
+        "fr-order-first-last": [
+            "français",
+            "ordre",
+            "premier",
+            "dernier"
+        ]
+    }
 }

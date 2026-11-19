@@ -3,9 +3,9 @@
 Everything here reuses the lenses already fitted by `slurm_fit_lenses.sh`. No Jacobian is
 refitted. The only new fitting is the J++ expert weights (minutes per run).
 
-## Install
+## Files
 
-Copy these files into `scripts/ubelix/` of the repo:
+All in `scripts/ubelix-language-transfer/`:
 
 | File | Role | Needs GPU |
 |---|---|---|
@@ -15,6 +15,9 @@ Copy these files into `scripts/ubelix/` of the repo:
 | `score_language_matrix.py` | Scores every lens under prompt language x target language | yes |
 | `analyze_language_transfer.py` | Tables with bootstrap intervals | no |
 | `slurm_language_transfer.sh` | Runs the five stages | |
+| `validate_parallel_items.py` | Checks `parallel_items.json` against upstream and the tokenizer | no (tokenizer only) |
+| `check_french_tokens.py` | Which French words are single tokens (scoreable) | no (tokenizer only) |
+| `diagnose_correctness.py` | Prints the model's next tokens on every multihop prompt, to see why it fails | yes |
 | `make_random_pools.py` | Optional: random pools (requires refitting, see the end) | no |
 
 ## Run
@@ -22,12 +25,17 @@ Copy these files into `scripts/ubelix/` of the repo:
 From the repo root, same environment as the sweep (same container, `ROOT`, `MODEL`, `LAYERS`):
 
 ```
-sbatch scripts/ubelix/slurm_language_transfer.sh
+sbatch --account=gratis scripts/ubelix-language-transfer/slurm_language_transfer.sh
 ```
 
 That runs `prepare grade weights score analyze` in order. Every stage skips finished work, so
 a preempted job can be resubmitted as is. To run a subset:
-`STAGE="score analyze" sbatch scripts/ubelix/slurm_language_transfer.sh`.
+`STAGE="score analyze" sbatch scripts/ubelix-language-transfer/slurm_language_transfer.sh`.
+
+**Before a rerun with edited items**, delete the previous outputs *and the residual caches*:
+`rm -rf $ROOT/lang $ROOT/runs/*/n1000/jpp_w* $ROOT/runs/*/n1000/residuals_weights_*.pt`.
+The cache is keyed on item names, not on prompts: a changed item list makes `fit-weights`
+fail, and changed prompts under the same names would silently reuse old activations.
 
 Send back: `$ROOT/lang/analysis/summary.md`, `$ROOT/lang/ranks_dropped.csv`,
 `$ROOT/lang/correctness_fr.csv`, and the job log.
@@ -35,7 +43,8 @@ Send back: `$ROOT/lang/analysis/summary.md`, `$ROOT/lang/ranks_dropped.csv`,
 ## What each stage does and why
 
 **prepare.** Builds a benchmark where a domain is a pair (prompt language, target language).
-- *Parallel items* (38 multihop, 39 association): the same concept with an English prompt and
+- *Parallel items* (53 multihop, of which 22 custom items with their own English side, and
+  39 association): the same concept with an English prompt and
   a French prompt, and the hidden intermediate as an English word and as a French word
   (Brazil / Brésil, grief / deuil). Each item is scored under four conditions.
 - *French multilingual items* (the 17 upstream French items): French prompt only, scored with
@@ -48,8 +57,16 @@ Send back: `$ROOT/lang/analysis/summary.md`, `$ROOT/lang/ranks_dropped.csv`,
   Items the existing `jpp.pt` lenses were weighted on are forced into the fitting side, so the
   existing lenses are scored out-of-sample.
 
+- *Prompt format.* A multihop prompt that ends with a space before a word answer loses that
+  space, in both languages (`--keep-trailing-space` turns this off). With the space, Qwen3.5-9B
+  tends to start a number ("...where Mount Fuji rises is " -> "1000 km") although it knows the
+  answer; without it, it answers " Tokyo". Prompts with a number answer keep the space
+  (otherwise the next token is a lone space), and prompts ending in a quote are unchanged.
+  The main sweep and the standard benchmark keep the upstream prompts.
+
 **grade.** Greedy correctness in each prompt language. The analysis keeps a parallel item only
-if the model is right in both languages.
+if the model is right in both languages. The job grades with `--ignore-case`: " North" counts
+for "north". The upstream, case-sensitive verdict is kept in a second column.
 
 **weights.** For every run, two new J++ lenses from the same expert Jacobians:
 `jpp_wen.pt` (weights fitted on English prompts with English targets) and `jpp_wfr.pt` (same
@@ -87,27 +104,33 @@ and for each intermediate position of the latter (language name, category, opera
 
 ## Check before trusting the numbers
 
-1. **Proofread `parallel_items.json`.** The French prompts were machine-drafted. A prompt
-   must not contain its own intermediate, and multihop prompts must end exactly where the
-   French answer starts. After edits: delete `$ROOT/lang` and `runs/*/n1000/jpp_w*.pt`, rerun.
+1. **Proofread `parallel_items.json`** and run `validate_parallel_items.py` (0 errors needed).
+   The French prompts were machine-drafted. A prompt must not contain its own intermediate,
+   and multihop prompts must end exactly where the French answer starts. Never replace a
+   multi-token French word by a different concept. After edits: delete the outputs and the
+   caches (see Run), then rerun.
 2. **Single-token French words.** A word that is several tokens for the Qwen tokenizer cannot
    be scored and is dropped (upstream rule). `ranks_dropped.csv` lists them and the top of
-   `summary.md` gives the item counts left after each filter. I could not load the tokenizer
-   here, so this rate is unknown. If many are lost, replace those words with shorter synonyms.
-3. **French correctness.** If the model fails many French multihop prompts
-   (`correctness_fr.csv`), the phrasing is the first suspect.
+   `summary.md` gives the item counts left after each filter. Eight association concepts are
+   lost this way (deuil, mensonge, pauvreté, soulagement, honte, horreur, échecs, aube) and
+   two multilingual words (marcher, neveu); no single-token true synonym exists.
+3. **Correctness.** If the model fails many multihop prompts (`correctness_*.csv`), run
+   `diagnose_correctness.py` to see what it answers instead. Remaining failures are answers
+   in Chinese (北京 for Beijing) and genuine errors (Vienna for Berlin).
 4. **Weight-fit size.** `runs/<run>/n1000/jpp_wfr_stamp.json` lists `fitting_item_names` and
-   `train_macro_pass`. About 26 items are available against roughly 100 upstream, so these
+   `train_macro_pass`. About 25 items are available against roughly 100 upstream, so these
    weights are noisier than the original ones. `jpp_wen` has the same handicap, which keeps
    the English/French comparison fair.
 
-## What was tested, and what was not
+## Runs so far (Qwen3.5-9B, UBELIX)
 
-Tested here on CPU: the builder against the pinned upstream data; the grader and the scorer
-end to end on upstream's tiny test model; the analysis on synthetic scores with a planted
-effect, which it recovered; the upstream loader on the weight-fitting folders.
-Not tested: anything on the real model or tokenizer, the `fit-weights` and `merge-experts`
-calls, and the Slurm script beyond a syntax check.
+| Run | Job | Items file | Scored items after filters | What was wrong |
+|---|---|---|---|---|
+| 1 | 22199941 | original (77 parallel) | 29 parallel + 11 multilingual | 17 French words not single tokens; few multihop items |
+| 2 | 22218714 | revised (92 parallel) | 31 parallel + 11 multilingual | trailing-space prompts and case-sensitive grading failed most multihop items |
+| 3 | 22235951 | revised, new prompt format, case-insensitive grading | 40 parallel (20 association, 20 multihop) + 11 multilingual | (current results) |
+
+Run 3 is the one the paper uses. Outputs are not committed: the job writes them to `$ROOT/lang/`, and `make_gap_slide.py` and `make_p_matrices.py` draw the slides and the full P matrices from `$ROOT/lang/analysis/`.
 
 ## Two things found while reading the code
 

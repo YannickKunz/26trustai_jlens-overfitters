@@ -23,7 +23,8 @@
 #   weights   J++ expert weights on English and on French labels       -> runs/<run>/n$SIZE/jpp_wen.pt, jpp_wfr.pt
 #   score     every lens under prompt language x target language       -> $ROOT/lang/ranks.csv
 #   analyze   tables with bootstrap intervals                          -> $ROOT/lang/analysis/summary.md
-# To rebuild after editing parallel_items.json, delete $ROOT/lang and the jpp_w*.pt files first.
+# To rebuild after editing parallel_items.json, delete $ROOT/lang, runs/*/n$SIZE/jpp_w* and
+# runs/*/n$SIZE/residuals_weights_*.pt first (the residual cache is keyed on item names, not prompts).
 set -euo pipefail
 
 STAGE="${STAGE:-prepare grade weights score analyze}"
@@ -57,7 +58,7 @@ cli() { run scripts/jpp_cli.py "$@"; }
 # Finished shard dirs for shards 0..$2-1 of the fit root $1, in order (as in slurm_fit_lenses.sh)
 shard_dirs() {
     for shard in $(seq 0 $(($2 - 1))); do
-        find "$1" -type f -path "*/shard${shard}of${NUM_SHARDS}/fit_shard_stamp.json" -printf '%h\n' | head -1
+        find "$1/" -type f -path "*/shard${shard}of${NUM_SHARDS}/fit_shard_stamp.json" -printf '%h\n' | head -1
     done
 }
 
@@ -73,7 +74,7 @@ prepare)
     ;;
 grade)
     [ -f "$LANG_DIR/correctness_fr.csv" ] || run "$HELPERS/grade_language_items.py" \
-        --model "$MODEL" --layers "$LAYERS" --lang "$LANG_DIR"
+        --model "$MODEL" --layers "$LAYERS" --lang "$LANG_DIR" --ignore-case
     ;;
 weights)
     for name in $RUNS; do
@@ -84,7 +85,7 @@ weights)
         if [ ! -f "$experts" ]; then
             merged_here=1
             # slurm_fit_lenses.sh deletes the merged experts after scoring: merge the shards again
-            NUM_SHARDS="$(find "$ROOT/runs/$name/rlens" -type d -name 'shard0of*' | head -1 | sed 's/.*shard0of//')"
+            NUM_SHARDS="$(find "$ROOT/runs/$name/rlens/" -type d -name 'shard0of*' | head -1 | sed 's/.*shard0of//')"
             [ -n "$NUM_SHARDS" ] || { echo "No rlens shards under $ROOT/runs/$name"; exit 1; }
             cli merge-experts --checkpoint-dirs $(shard_dirs "$ROOT/runs/$name/rlens" $((SIZE * NUM_SHARDS / NUM_PROMPTS))) \
                 --out "$experts"

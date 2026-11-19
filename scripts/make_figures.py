@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Paper figures (PDF and PNG) from the analysis CSVs. Needs pandas, numpy and matplotlib only.
 
+  Each figure is written as PDF, SVG (for Typst) and PNG.
   fig1_conditions   recall@10 under the four language conditions, EN-fit vs FR-fit lenses
   fig2_layers       cosine distance per layer: noise floor, corpus change, language change
   fig3_convergence  cosine to the 1000-prompt lens, and noise-floor cosine, vs prompts
@@ -34,7 +35,7 @@ plt.rcParams.update({
 
 
 def save(fig, out, name):
-    for suffix in ("pdf", "png"):
+    for suffix in ("pdf", "svg", "png"):
         fig.savefig(out / f"{name}.{suffix}")
     plt.close(fig)
     print("wrote", out / f"{name}.pdf")

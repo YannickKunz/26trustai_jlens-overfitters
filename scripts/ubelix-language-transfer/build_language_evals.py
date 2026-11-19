@@ -9,9 +9,20 @@ under --out:
 The two weights_* folders are what `jpp_cli.py fit-weights --eval-data-dir ... --items all`
 reads, so J++ expert weights can be fitted on labels in the lens's own language.
 
+A parallel item normally takes its English side from the upstream item of the same (eval, name).
+A custom item, with no upstream counterpart, carries its own English side in en_prompt,
+en_target and en_intermediates.
+
 The split is per concept, so an item is on the same side in every language. Items named in
 --upstream-stamps (the fitting_item_names of the existing jpp.pt lenses) are forced into the
 fitting split, which keeps those lenses out-of-sample on everything scored here.
+
+Prompt format (both languages alike, multihop items only): a prompt that ends with a space
+before an answer that starts with a letter loses that space, so the model can answer with its
+usual " Tokyo" token. With the space, Qwen3.5-9B tends to start a number ("1000 km") and fails
+the grade although it knows the answer (scripts diagnose_correctness.py). Prompts whose answer is
+a number keep the space: without it the next token is a lone space. --keep-trailing-space turns
+this off and reproduces the upstream format exactly.
 CPU only, standard library only. Run from jlens_jpp_reproduction/jpp_lens/.
 """
 import argparse
@@ -29,6 +40,8 @@ def main():
     parser.add_argument("--upstream-stamps", nargs="*", default=[], help="jpp_stamp.json files of the existing J++ lenses")
     parser.add_argument("--fit-fraction", type=float, default=0.35)
     parser.add_argument("--seed", type=int, default=0)
+    parser.add_argument("--keep-trailing-space", action="store_true",
+                        help="Keep the upstream prompt format (no space stripping before word answers)")
     parser.add_argument("--out", required=True)
     args = parser.parse_args()
 
@@ -46,13 +59,22 @@ def main():
 
     items = []
     for row in french["parallel"]:
-        english = upstream[(row["eval"], row["name"])]
+        if "en_prompt" in row:
+            if (row["eval"], row["name"]) in upstream:
+                raise ValueError(f"{row['name']}: custom item with the name of an upstream item; rename it")
+            english = {"prompt": row["en_prompt"], "target": row.get("en_target"),
+                       "intermediates": row["en_intermediates"]}
+        elif (row["eval"], row["name"]) in upstream:
+            english = upstream[(row["eval"], row["name"])]
+        else:
+            raise ValueError(f"{row['name']}: no upstream {row['eval']} item with this name, and no en_prompt")
         prompt = row["fr_prompt"] or upstream[(row["eval"], row["fr_upstream_item"])]["prompt"]
         if len(english["intermediates"]) != len(row["fr_intermediates"]):
             raise ValueError(f"{row['name']}: the two languages need the same number of intermediates")
         aliases = {row["name"], row.get("fr_upstream_item")}
         items.append({
             "eval": row["eval"], "name": row["name"], "group": "parallel",
+            "source": "custom" if "en_prompt" in row else "upstream",
             "forced_fit": bool(aliases & forced),
             "en": {"prompt": english["prompt"], "target": english.get("target"), "intermediates": english["intermediates"]},
             "fr": {"prompt": prompt, "target": row["fr_target"], "intermediates": row["fr_intermediates"]},
@@ -65,6 +87,18 @@ def main():
             "en": {"prompt": None, "target": None, "intermediates": english["intermediates"]},
             "fr": {"prompt": english["prompt"], "target": english["target"], "intermediates": fr_intermediates},
         })
+    stripped = 0
+    if not args.keep_trailing_space:
+        for item in items:
+            if item["group"] != "parallel" or item["eval"] != "multihop":
+                continue
+            for language in ("en", "fr"):
+                side = item[language]
+                if side["target"] and side["target"][0].isalpha() and side["prompt"].endswith(" "):
+                    side["prompt"] = side["prompt"].rstrip(" ")
+                    stripped += 1
+    print(f"Trailing space removed before a word answer in {stripped} multihop prompts")
+
     names = [item["name"] for item in items]
     if len(set(names)) != len(names):
         raise ValueError("item names must be unique across evals (fit-weights selects by name)")
